@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AAmBA,oCAAoC;AAGpC,oCAAoC;AAGpC,mCAAmC",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/foundation/_reset.scss",
+        "../scss/foundation/_function.scss",
+        "../scss/foundation/_base.scss",
+        "../scss/foundation/_mixin.scss",
+        "../scss/foundation/_variables.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
