@@ -12,97 +12,125 @@
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
     <link href="./css/style.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
+
 </head>
 
 <body>
     <header class="l-header">
-        <h1 class="l-header__title">Hamburger</h1>
+        <div class="p-header">
+            <a class="p-header__nav" href="">
+                <span class="c-menubtn--line is-open">Menu</span></a>
 
-        <form class="l-header__search">
-            <input type="text" class="searchbox fa fa-1x" value="&#xf002;">
-            <button type="submit" class="submit-btn">検索</button>
-        </form>
+            <h1 class="p-header__title"><a href="">Hamburger</a></h1>
+
+            <div class="p-header__search">
+                <input class="p-header__searchbox c-searchbox fa fa-1x" type="text" value="&#xf002;">
+                <button class="p-header__search-btn c-searchbtn c-btn" type="submit">検索</button>
+            </div>
+        </div>
 
     </header>
 
-    <aside class="l-sidebar">
-        <h2 class="l-sidebar__title">Menu</h2>
-        <div class="l-sidebar__menu">
-            <h3>バーガー</h3>
-            <ul>
-                <li><a href="#">ハンバーガー</a></li>
-                <li><a href="#">チーズバーガー</a></li>
-                <li><a href="#">テリヤキバーガー</a></li>
-                <li><a href="#">アボカドバーガー</a></li>
-                <li><a href="#">フィッシュバーガー</a></li>
-                <li><a href="#">ベーコンバーガー</a></li>
-                <li><a href="#">チキンバーガー</a></li>
+    <aside class="l-sidebar p-sidebar">
+
+        <nav class="p-nav">
+            <ul class="p-nav__list">
+                <li class="p-nav__item"><a href="#">バーガー</a>
+                    <ul class="p-subnav__list">
+                        <li class="p-subnav__item"><a href="#">ハンバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">チーズバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">テリヤキバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">アボカドバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">フィッシュバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">ベーコンバーガー</a></li>
+                        <li class="p-subnav__item"><a href="#">チキンバーガー</a></li>
+                    </ul>
+                </li>
+
+                <li class="p-nav__item"><a href="#">サイド</a>
+                    <ul class="p-subnav__list">
+                        <li class="p-subnav__item"><a href="#">ポテト</a></li>
+                        <li class="p-subnav__item"><a href="#">サラダ</a></li>
+                        <li class="p-subnav__item"><a href="#">ナゲット</a></li>
+                        <li class="p-subnav__item"><a href="#">コーン</a></li>
+                    </ul>
+                </li>
+
+                <li class="p-nav__item"><a href="#">ドリンク</a>
+                    <ul class="p-subnav__list">
+                        <li class="p-subnav__item"><a href="#">コーラ</a></li>
+                        <li class="p-subnav__item"><a href="#">ファンタ</a></li>
+                        <li class="p-subnav__item"><a href="#">オレンジ</a></li>
+                        <li class="p-subnav__item"><a href="#">アップル</a></li>
+                        <li class="p-subnav__item"><a href="#">紅茶(ice/hot)</a></li>
+                        <li class="p-subnav__item"><a href="#">コーヒー(ice/hot)</a></li>
+                    </ul>
+                </li>    
             </ul>
-            <h3>サイド</h3>
-            <ul>
-                <li><a href="#">ポテト</a></li>
-                <li><a href="#">サラダ</a></li>
-                <li><a href="#">ナゲット</a></li>
-                <li><a href="#">コーン</a></li>
-            </ul>
-            <h3>ドリンク</h3>
-            <ul>
-                <li><a href="#">コーラ</a></li>
-                <li><a href="#">ファンタ</a></li>
-                <li><a href="#">オレンジ</a></li>
-                <li><a href="#">アップル</a></li>
-                <li><a href="#">紅茶(ice/hot)</a></li>
-                <li><a href="#">コーヒー(ice/hot)</a></li>
-            </ul>
-        </div>
+        </nav>
+
     </aside>
+
     <main>
-        <section class="p-frontTop">
-            <h2 class="">ダミーサイト</h2>
-
+        <section class="p-mainvisual">
+            <h2 class="p-mainvisual__heading">ダミーサイト</h2>
         </section>
 
-        <section class="p-container">
-            <h3 class="p-container__takeout">Take Out</h3>
-            <dl>
-                <dt>Take out</dt>
-                <dd>当店のテイクアウトで利用できる商品を掲載しています</dd>
-            </dl>
-            <dl>
-                <dt>Take out</dt>
-                <dd>当店のテイクアウトで利用できる商品を掲載しています</dd>
-            </dl>
+        <div class="p-maincontainer">
+            <article class="p-branchmenu--takeout">
+                <h3 class="p-branchmenu__heading"><a href="">Take Out</a></h3>
+                <div class="c-decoline"></div>
+                <dl class="c-card">
+                    <dt class="p-branchmenu__subheading c-card__head">Take out</dt>
+                    <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                </dl>
 
-            <h3 class="p-container__eatin">Eat in</h3>
-            <dl>
-                <dt>Take out</dt>
-                <dd>当店のテイクアウトで利用できる商品を掲載しています</dd>
-            </dl>
-            <dl>
-                <dt>Take out</dt>
-                <dd>当店のテイクアウトで利用できる商品を掲載しています</dd>
-            </dl>
+                <dl class="c-card">
+                    <dt class="p-branchmenu__subheading c-card__head">Take out</dt>
+                    <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                </dl>
+                </atricle>
+                <article class="p-branchmenu--eatin">
+                    <h3 class="p-branchmenu__heading"><a href="">Eat In</a></h3>
+                    <div class="c-decoline"></div>
+                    <dl class="c-card">
+                        <dt class="p-branchmenu__subheading c-card__head">Eat In</dt>
+                        <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
+    
+                    <dl class="c-card">
+                        <dt class="p-branchmenu__subheading c-card__head">Eat in</dt>
+                        <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
 
-        </section>
-
+                </article>
+        </div>
         <section class="p-map">
-            <h3>見出しが入ります</h3>
-            <p>
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                テキストが入ります。テキストが入ります。テキストが入ります。
-            </p>
+            <div class="c-layercolor">
+                <h3 class="p-map__heading">見出しが入ります</h3>
+                <div class="c-decoline"></div>
+                <p class="p-map__txt">
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                </p>
+            </div>
         </section>
     </main>
 
 
-    <footer class="l-footer">
-        <p class="l-footer__list">ショップ情報|ヒストリー</P>
-        <p class="l-footer__copyright">Copyright:RaiseTech</p>
+    <footer class="l-footer p-footer">
+        <div class="p-footer__info">
+            <a class="p-footer__list" href="">ショップ情報</a>
+            <a class="p-footer__list" href="">ヒストリー</a>
+        </div>
+        <p class="p-footer__copyright">Copyright:RaiseTech</p>
 
     </footer>
 
