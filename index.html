@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HamburgerSite</title>
-    <meta name="description" content="ハンバーガーサイトの模写">
+    <meta name="description" content="ハンバーガーサイト作成課題">
 
     <!-- style -->
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
@@ -20,22 +20,24 @@
 <body>
     <header class="l-header">
         <div class="p-header">
-            <a class="p-header__nav" href="">
-                <span class="c-menubtn--line is-open">Menu</span></a>
+            <button class="p-header__nav" href="">
+                <span class="p-header-btn c-menubtn is-active">Menu</span>
+            </button>    
 
-            <h1 class="p-header__title"><a href="">Hamburger</a></h1>
+            <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-            <div class="p-header__search">
-                <input class="p-header__searchbox c-searchbox fa fa-1x" type="text" value="&#xf002;">
-                <button class="p-header__search-btn c-searchbtn c-btn" type="submit">検索</button>
-            </div>
+            <form class="p-header__search">
+                <label for="search" class="screen-reader-text"></label>
+                <input id="search" name="search" class="p-header__searchbox fa fa-1x" type="text" value="&#xf002;">
+                <button class="p-header__search-btn c-searchbtn" type="submit">検索</button>
+            </form>
         </div>
 
     </header>
 
-    <aside class="l-sidebar p-sidebar">
+    <aside class="l-sidebar">
 
-        <nav class="p-nav">
+        <nav class="l-sidebar__nav p-nav">
             <ul class="p-nav__list">
                 <li class="p-nav__item"><a href="#">バーガー</a>
                     <ul class="p-subnav__list">
@@ -73,44 +75,44 @@
 
     </aside>
 
-    <main>
-        <section class="p-mainvisual">
-            <h2 class="p-mainvisual__heading">ダミーサイト</h2>
-        </section>
+    <main class="l-main p-main">
+        <div class="p-main__img c-mainvisual">
+            <h2>ダミーサイト</h2>
+        </div>
 
-        <div class="p-maincontainer">
-            <article class="p-branchmenu--takeout">
-                <h3 class="p-branchmenu__heading"><a href="">Take Out</a></h3>
-                <div class="c-decoline"></div>
+        <div class="l-main__wrapper">
+            <article class="p-main__branchmenu--takeout">
+                <h3 class="p-main__subheading"><a href="">Take Out</a></h3>
+               
                 <dl class="c-card">
-                    <dt class="p-branchmenu__subheading c-card__head">Take out</dt>
-                    <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    <dt class="c-card__head">Take out</dt>
+                    <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                 </dl>
 
                 <dl class="c-card">
-                    <dt class="p-branchmenu__subheading c-card__head">Take out</dt>
-                    <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    <dt class="c-card__head">Take out</dt>
+                    <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                 </dl>
-                </atricle>
-                <article class="p-branchmenu--eatin">
-                    <h3 class="p-branchmenu__heading"><a href="">Eat In</a></h3>
-                    <div class="c-decoline"></div>
+            </atricle>
+            <article class="p-main__branchmenu--eatin">
+                    <h3 class="p-main__subheading"><a href="">Eat In</a></h3>
+                
                     <dl class="c-card">
-                        <dt class="p-branchmenu__subheading c-card__head">Eat In</dt>
-                        <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                        <dt class="c-card__head">Eat In</dt>
+                        <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                     </dl>
     
                     <dl class="c-card">
-                        <dt class="p-branchmenu__subheading c-card__head">Eat in</dt>
-                        <dd class="p-branchmenu__desc c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                        <dt class="c-card__head">Eat in</dt>
+                        <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                     </dl>
 
                 </article>
         </div>
-        <section class="p-map">
-            <div class="c-layercolor">
+        <section class="p-main__map">
+            <div class="p-map__wrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <h3 class="p-map__heading">見出しが入ります</h3>
-                <div class="c-decoline"></div>
                 <p class="p-map__txt">
                     テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                     テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
