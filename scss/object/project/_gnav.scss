@@ -1,0 +1,21 @@
+.p-gnav {
+    visibility: hidden;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #F2EDE9;
+    opacity: 0.7;
+    
+    
+      
+    &__item > a {
+        display: block;
+    }
+} 
+
+.c-toggle.active .p-gnav {
+    visibility: visible;
+}
+

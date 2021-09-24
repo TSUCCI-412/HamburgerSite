@@ -1,0 +1,63 @@
+.p-service__takeout {
+    background-image: url(../img/takeout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}
+.p-service__eatin {
+    background-image: url(../img/eatin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}  
+ 
+    
+.p-service {　　
+    &__wrapper {
+        width: 80%;
+        margin: auto;
+    }
+   
+
+    &__head {
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 250px;
+        & > a {
+            display: block;
+            padding: 15px;
+        }
+        & > a::after {
+            display: block;
+            content: "";
+            border: solid 2px;
+            width: 30px;
+            background: #fff;
+            margin-top: 10px;
+            }
+        }  
+    &__inner {
+    background-color: #fff;
+    opacity: .8;
+    height: 170px;
+    width: 90%;
+    margin: 10px auto;
+    }
+
+    &__list {
+        font-size: 22px;
+        font-family: "mplus+1m";
+        font-weight: bold;
+        color: #3C2A10;
+        padding: 20px 10px;
+    
+    }
+    &__desc {
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px;
+    }
+
+ }
