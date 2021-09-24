@@ -1,0 +1,8 @@
+// 変数の定義
+// min-width　～以上　「モバイルファースト」
+
+$breakpoints: (
+  'tb': 'screen and (min-width: 600px)',
+  'pc': 'screen and (min-width: 1025px)',
+ 
+) !default;

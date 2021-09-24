@@ -1,5 +1,8 @@
 html {
     box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
   }
   
   *,
@@ -7,21 +10,35 @@ html {
   *:after {
     box-sizing: inherit;
   }
+
+  body {
+    font-family: "mplus+1m", "Roboto", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFDFA;
+  }
+  
   
   a {
-    text-decoration: underline;
-    color: #2b70ba;
+    text-decoration: none;
+    
   }
   
   a:hover,
   a:active,
   a:focus {
-    text-decoration: underline;
+    text-decoration: none;
     color: #5997d9;
   }
   
   img {
     max-width: 100%;
-    height: auto;
-    vertical-align: middle;
+    vertical-align: middle;  /*画像の下の余白を削除*/
+  }
+
+  ul,li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
   }

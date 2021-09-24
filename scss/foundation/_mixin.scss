@@ -1,34 +1,24 @@
-//定数とミックスインで定義
-$pc: 1024px; // PC
-$tab: 680px; // タブレット
-$sp: 480px;  // スマホ
-
-@mixin pc {
-  @media (max-width: ($pc)) {
-    @content;
-  }
-}
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
-}
-@mixin sp {
-  @media (max-width: ($sp)) {
+// @mixinの定義
+// 変数をmq()というmixinで呼び出す
+@mixin mq($breakpoint:tb) {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
 
-//使用例
-//.box {
-//   @include pc {
-//     background-color: red;
-//    };
-//    @include tab {
-//      background-color: blue;
-//   };
-//    @include sp {
-//      background-color: yellow;
-//   };
-//  }
-//  
+@mixin mq($breakpoint:pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+//@include mq() { // 引数を省略（初期値はtbの600px）
+
+//@include mq(pc) { // 引数を個別に指定
+
+//min//  cssが効く範囲の最小の値
+//max//  cssが効く範囲の最大の値
+//min and max //   一定の範囲内で通用する値
+  
+
