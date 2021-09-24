@@ -1,0 +1,27 @@
+.l-main {
+    width: 100%;
+
+    @include mq(pc){
+        width: 80%;
+    }
+   
+    &__wrapper {
+        width: 90%;
+        margin: auto;
+        @include mq(tb){
+            display: grid;
+            gap: 25px;    //2つの写真の隙間
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__branchmenu {
+        margin-bottom: 15px;
+    }
+}     
+   
+        
+    
+    
+    
+
+
