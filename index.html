@@ -9,37 +9,46 @@
     <meta name="description" content="ハンバーガーサイト作成課題">
 
     <!-- style -->
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="./scss/foundation/_reset.scss">
+    <!--The new CSS Reset - version 1.2.0 (last updated 23.7.2021)-->
     <link href="./css/style.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
 
 </head>
 
 <body>
-    <header class="l-header">
-        <div class="p-header">
-            <button class="p-header__nav" href="">
-                <span class="p-header-btn c-menubtn is-active">Menu</span>
-            </button>    
+    <header class="l-header p-header">
 
-            <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
+        <!--<div class="p-header__toggle c-toggle">
+            <button class="c-toggle--sp">Menu
+                <span class="c-toggle__line"></span></button>
+        </div>!-->
 
-            <form class="p-header__search">
-                <label for="search" class="screen-reader-text"></label>
-                <input id="search" name="search" class="p-header__searchbox fa fa-1x" type="text" value="&#xf002;">
-                <button class="p-header__search-btn c-searchbtn" type="submit">検索</button>
-            </form>
-        </div>
+
+        <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
+
+        <form class="p-header__search" action="HamburgerサイトのURL" method="get">
+            <label for="search" class="screen-reader-text"></label>
+            <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text" value="&#xf002;">
+            <input class="p-header__sbtn c-btn--search c-btn" type="submit" value="検索">
+        </form>
 
     </header>
 
     <aside class="l-sidebar">
+        <nav class="l-sidebar__menu p-gnav">
 
-        <nav class="l-sidebar__nav p-nav">
-            <ul class="p-nav__list">
-                <li class="p-nav__item"><a href="#">バーガー</a>
+
+            <button type="button" class="c-toggle">Menu
+                <span class="c-toggle--line"></span>
+            </button>
+
+
+            <ul class="p-gnav__list">
+                <li class="p-gnav__item"><a href="#">バーガー</a>
                     <ul class="p-subnav__list">
                         <li class="p-subnav__item"><a href="#">ハンバーガー</a></li>
                         <li class="p-subnav__item"><a href="#">チーズバーガー</a></li>
@@ -51,7 +60,7 @@
                     </ul>
                 </li>
 
-                <li class="p-nav__item"><a href="#">サイド</a>
+                <li class="p-gnav__item"><a href="#">サイド</a>
                     <ul class="p-subnav__list">
                         <li class="p-subnav__item"><a href="#">ポテト</a></li>
                         <li class="p-subnav__item"><a href="#">サラダ</a></li>
@@ -60,7 +69,7 @@
                     </ul>
                 </li>
 
-                <li class="p-nav__item"><a href="#">ドリンク</a>
+                <li class="p-gnav__item"><a href="#">ドリンク</a>
                     <ul class="p-subnav__list">
                         <li class="p-subnav__item"><a href="#">コーラ</a></li>
                         <li class="p-subnav__item"><a href="#">ファンタ</a></li>
@@ -69,60 +78,80 @@
                         <li class="p-subnav__item"><a href="#">紅茶(ice/hot)</a></li>
                         <li class="p-subnav__item"><a href="#">コーヒー(ice/hot)</a></li>
                     </ul>
-                </li>    
+                </li>
             </ul>
         </nav>
 
+
     </aside>
 
-    <main class="l-main p-main">
-        <div class="p-main__img c-mainvisual">
-            <h2>ダミーサイト</h2>
-        </div>
 
-        <div class="l-main__wrapper">
-            <article class="p-main__branchmenu--takeout">
-                <h3 class="p-main__subheading"><a href="">Take Out</a></h3>
-               
-                <dl class="c-card">
-                    <dt class="c-card__head">Take out</dt>
-                    <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                </dl>
+    <main class="l-main">
+        <section class="l-top p-top">
+            <!--メインヴィジュアルのsection-->
+            <h2 class="p-top__title">ダミーサイト</h2>
+        </section>
 
-                <dl class="c-card">
-                    <dt class="c-card__head">Take out</dt>
-                    <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                </dl>
-            </atricle>
-            <article class="p-main__branchmenu--eatin">
-                    <h3 class="p-main__subheading"><a href="">Eat In</a></h3>
-                
-                    <dl class="c-card">
-                        <dt class="c-card__head">Eat In</dt>
-                        <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+        <section class="l-main__wrapper">
+            <!--TakeoutとEatinメニューを囲む-->
+            <article class="l-main__branchmenu p-service__takeout">
+                <!--Takeout-->
+                <h3 class="p-service__head"><a href="">Take Out</a></h3>
+                <div class="p-service__wrapper">
+                    <!--カードを囲む-->
+                    <dl class="p-service__inner">
+                        <dt class="p-service__list">Take Out</dt>
+                        <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                     </dl>
-    
-                    <dl class="c-card">
-                        <dt class="c-card__head">Eat in</dt>
-                        <dd class="c-card__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    <dl class="p-service__inner">
+                        <dt class="p-service__list">Take Out</dt>
+                        <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
                     </dl>
+                </div>
+            </article>
+            <article class="l-main__branchmenu p-service__eatin">
+                <!--Eatin-->
+                <h3 class="p-service__head"><a href="">Eat In</a></h3>
+                <div class="p-service__wrapper">
+                    <!--カードを囲む-->
+                    <dl class="p-service__inner">
+                        <dt class="p-service__list">Eat In</dt>
+                        <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
+                    <dl class="p-service__inner">
+                        <dt class="p-service__list">Eat in</dt>
+                        <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                    </dl>
+                </div>
+            </article>
+        </section>
+        <!--TakeoutとEatinメニューを囲むsection-->
 
-                </article>
-        </div>
-        <section class="p-main__map">
+        <section class="l-main__map p-map">
+            <!--Mapのsection-->
             <div class="p-map__wrap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <h3 class="p-map__heading">見出しが入ります</h3>
-                <p class="p-map__txt">
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。
-                </p>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <div class="p-map__layer"></div>
+                <!--地図のグレーカラー-->
+                <div class="p-map__contnet">
+                    <h3 class="p-map__head">見出しが入ります</h3>
+                    <!--横線が入る-->
+                    <p class="p-map__txt">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        テキストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
+                </div>
             </div>
+
         </section>
     </main>
 
@@ -132,10 +161,11 @@
             <a class="p-footer__list" href="">ショップ情報</a>
             <a class="p-footer__list" href="">ヒストリー</a>
         </div>
-        <p class="p-footer__copyright">Copyright:RaiseTech</p>
+        <p><small class="p-footer__copyright">Copyright: RaiseTech</small></p>
 
     </footer>
-
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

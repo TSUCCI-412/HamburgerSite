@@ -1,5 +1,6 @@
 .l-main {
     width: 100%;
+    height: auto;
 
     @include mq(pc){
         width: 80%;
@@ -17,7 +18,8 @@
     &__branchmenu {
         margin-bottom: 15px;
     }
-}     
+    
+    }     
    
         
     

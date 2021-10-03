@@ -1,28 +1,32 @@
+
 .c-toggle {
-   display: flex;
-   justify-content: flex-end;
+   position: fixed;
+   top: 20px;
+   right: 15px;
    color: #707070;
    font-size: 1.25rem;
    cursor: pointer; 
-   padding: 10px;
-   @include mq(pc){
-      display: none;
-   }
-
-  
+   //@include mq(pc){
+      //display: none;
+   //}  
 }
 
+
+
 /* スマホの✖ */
-.c-toggle.active .c-toggle__line {
+.c-toggle--line {
    position: absolute;
-   top: 25px;   /* 位置*/
-   right: 20px; /* 位置*/
+   top: 15px;   /* 位置*/
+   right: 15px; /* 位置*/
    width: 35px; /*線の長さ*/
    height: 4px; /*線の太さ*/
    background: #707070;  /*線の色*/
    border-radius: 10px;
    transition: .4s ease-in-out;
    transform: rotate(50deg);
+   display: none;
+  
+   
    
    &::after {
       content: "";
@@ -39,13 +43,9 @@
    }
 }
 
-/* Menuの文字がクリックで消える*/
-.c-toggle.active .c-toggle--sp {
-  visibility: hidden;
+.c-toggle--line.active {
+   display: block;
 }
-
-
-
 
   
   
