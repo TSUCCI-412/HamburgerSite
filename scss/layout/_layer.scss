@@ -1,0 +1,30 @@
+.l-layer {
+	width: 100%;
+	
+}
+
+.l-layer.cover {
+	position: fixed;
+	z-index: 900;   //全体にfadeがかかる
+}
+
+.l-layer::after {
+    /* 透過した白を重ねる */
+	background-color: #707070;
+    opacity: 0.5;
+	/* どの範囲に重ねるかを指定 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: ' ';
+    visibility: hidden;
+}
+
+.l-layer.cover::after {
+	visibility: visible;
+}
+
+
+

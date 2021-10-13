@@ -134,55 +134,100 @@ ul, li {
 
 .l-footer {
   width: 100%;
-  height: 160px;
+  height: 150px;
+}
+
+.l-layer {
+  width: 100%;
+}
+
+.l-layer.cover {
+  position: fixed;
+  z-index: 900;
+}
+
+.l-layer::after {
+  /* 透過した白を重ねる */
+  background-color: #707070;
+  opacity: 0.5;
+  /* どの範囲に重ねるかを指定 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+  visibility: hidden;
+}
+
+.l-layer.cover::after {
+  visibility: visible;
 }
 
 /*Component-----------------------*/
 .c-toggle {
-  position: fixed;
+  position: absolute;
   top: 20px;
-  right: 15px;
+  right: 20px;
+}
+
+.c-toggle--btn {
+  position: relative;
   color: #707070;
   font-size: 1.25rem;
   cursor: pointer;
 }
 
-/* スマホの✖ */
-.c-toggle--line {
-  position: absolute;
-  top: 15px;
-  /* 位置*/
-  right: 15px;
-  /* 位置*/
-  width: 35px;
-  /*線の長さ*/
-  height: 4px;
-  /*線の太さ*/
-  background: #707070;
-  /*線の色*/
-  border-radius: 10px;
-  transition: .4s ease-in-out;
-  transform: rotate(50deg);
+@media screen and (min-width: 600px) {
+  .c-toggle--btn {
+    font-size: 2.1rem;
+  }
+}
+
+.c-toggle--btn.active {
   display: none;
 }
 
-.c-toggle--line::after {
+/* スマホの✖ */
+.c-toggle--line {
+  display: block;
+  position: relative;
+  z-index: 1100;
+  right: 15px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.c-toggle--line::after, .c-toggle--line::before {
   content: "";
   position: absolute;
   display: block;
   width: 100%;
-  height: 100%;
-  background-color: inherit;
+  height: 3px;
+  background-color: #707070;
   border-radius: 10px;
-  transform: rotate(-100deg);
+  transition: .4s ease-in-out;
+  display: none;
+}
+
+.c-toggle--line::before {
+  top: 7px;
 }
 
 .c-toggle--line::after {
-  top: 0px;
+  top: 23px;
 }
 
-.c-toggle--line.active {
+.c-toggle--line.active::before {
   display: block;
+  transform: translateY(9px) rotate(45deg);
+}
+
+.c-toggle--line.active::after {
+  display: block;
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /*Project-------------------------*/
@@ -254,12 +299,28 @@ ul, li {
   background-color: #FFF7EF;
 }
 
+@media screen and (min-width: 1025px) {
+  .p-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+}
+
 .p-header__title {
   font-family: "Roboto";
   font-size: 2.5rem;
   color: #707070;
   text-align: center;
-  padding-top: 40px;
+  position: relative;
+  top: 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-header__title {
+    top: 60px;
+    font-size: 4.0rem;
+  }
 }
 
 .p-header__title > a {
@@ -269,7 +330,8 @@ ul, li {
 .p-header__search {
   display: flex;
   justify-content: center;
-  padding: 35px 0 40px 0;
+  position: relative;
+  top: 80px;
 }
 
 .p-header__sbox {
@@ -279,6 +341,12 @@ ul, li {
   height: 45px;
   width: 230px;
   margin-right: 12px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__sbox {
+    width: 300px;
+  }
 }
 
 .p-header__sbtn {
@@ -291,6 +359,12 @@ ul, li {
   width: 70px;
   border: 1px solid;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__sbtn {
+    width: 100px;
+  }
 }
 
 .fas {
@@ -318,11 +392,21 @@ ul, li {
 .p-gnav {
   position: fixed;
   top: 0px;
-  right: 0px;
-  width: 80%;
+  right: -300px;
+  width: 300px;
+  height: 100%;
   background-color: #F2EDE9;
-  opacity: 0.8;
   z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-gnav {
+    position: absolute;
+    right: 0;
+    width: inherit;
+  }
 }
 
 .p-gnav__list {
@@ -331,18 +415,27 @@ ul, li {
 
 .p-gnav__item > a {
   display: block;
-  font-size: 1.5rem;
   font-weight: bold;
   color: #707070;
-  padding: 20px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-gnav__item > a {
+    font-size: 1.5rem;
+  }
 }
 
 .p-subnav__item > a {
   display: block;
-  font-size: 1.2rem;
   color: #707070;
-  margin: 10px;
-  padding-left: 75px;
+  padding: 10px 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-subnav__item > a {
+    font-size: 1.25rem;
+  }
 }
 
 .p-map__wrap {
@@ -379,7 +472,7 @@ ul, li {
 
 .p-map__head {
   font-family: "M+1";
-  font-size: 1.6rem;
+  font-size: 1.875rem;
   font-weight: bold;
   color: #fff;
   position: absolute;
@@ -400,9 +493,9 @@ ul, li {
 
 .p-map__txt {
   font-family: "M+1";
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: bold;
-  line-height: 2;
+  line-height: 1.5;
   color: #fff;
   position: absolute;
   top: 100px;
@@ -413,7 +506,6 @@ ul, li {
 
 @media screen and (min-width: 600px) {
   .p-map__txt {
-    font-size: 0.875rem;
     line-height: 2.2;
   }
 }
@@ -421,7 +513,7 @@ ul, li {
 @media screen and (min-width: 1025px) {
   .p-map__txt {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2.0;
   }
 }
 

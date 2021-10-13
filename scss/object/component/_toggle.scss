@@ -1,53 +1,73 @@
 
 .c-toggle {
-   position: fixed;
+   position: absolute;
    top: 20px;
-   right: 15px;
-   color: #707070;
-   font-size: 1.25rem;
-   cursor: pointer; 
-   //@include mq(pc){
-      //display: none;
-   //}  
+   right: 20px;
+    
+   &--btn {
+      position: relative;
+      color: #707070;
+      font-size: 1.25rem;
+      cursor: pointer; 
+      @include mq(tb){
+         font-size: 2.1rem;
+      }
+      
+
+      
+   
+   &.active {
+      display: none;
+      }
+   }
 }
-
-
 
 /* スマホの✖ */
 .c-toggle--line {
-   position: absolute;
-   top: 15px;   /* 位置*/
-   right: 15px; /* 位置*/
-   width: 35px; /*線の長さ*/
-   height: 4px; /*線の太さ*/
-   background: #707070;  /*線の色*/
-   border-radius: 10px;
-   transition: .4s ease-in-out;
-   transform: rotate(50deg);
-   display: none;
-  
-   
-   
-   &::after {
+   display: block; //spanにクリック時の範囲を持たせるため
+   position: relative;
+   z-index: 1100;
+   right: 15px;
+   top: 0;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   &::after,&::before {
       content: "";
       position: absolute;
       display: block;
       width: 100%;
-      height: 100%;
-      background-color: inherit;
+      height: 3px;
+      background-color: #707070;
       border-radius: 10px;
-      transform: rotate(-100deg);
+      transition: .4s ease-in-out;
+      display: none;
      }
-   &::after {
-      top:0px;
+   &::before {
+      top: 7px;
+     
    }
-}
+   &::after {
+      top: 23px;
+   
+   }
+   &.active::before {
+       display: block;
+       transform: translateY(9px) rotate(45deg);
+       
+    }
+    &.active::after {
+      display: block;
+      transform: translateY(-7px)rotate(-45deg);
+   }
+}  
 
-.c-toggle--line.active {
-   display: block;
-}
 
-  
+
+
+
+
+
   
    
 

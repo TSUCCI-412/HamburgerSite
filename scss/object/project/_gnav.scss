@@ -1,31 +1,46 @@
 .p-gnav {
     position: fixed;
     top: 0px;
-    right: 0px;
-    width: 80%;
+    right: -300px;
+    width: 300px;
+    height: 100%;
     background-color: #F2EDE9;
-    opacity: 0.8;
     z-index: 1000;
+    overflow-y: auto;  //メニューをスクロール
+    -webkit-overflow-scrolling: touch;
+    @include mq(pc){
+        position: absolute;
+        right: 0;
+        width:inherit;
+        
+        }
     
     &__list {
         margin-top: 150px;
+        
+        
     }
     &__item > a {
         display: block;
-        font-size: 1.5rem;
         font-weight: bold; ;
         color: #707070;
-        padding: 20px;    
+        padding: 10px;  
+        @include mq(pc){
+            font-size: 1.5rem;
+        }  
     }
     
 } 
 
 .p-subnav__item > a {
     display: block;
-    font-size: 1.2rem;
     color: #707070;
-    margin: 10px;
-    padding-left: 75px;   
+    padding: 10px 20px;
+    @include mq(pc){
+        font-size: 1.25rem;
+
+    }   
+      
 
 }
 
