@@ -2,9 +2,6 @@
     width: 100%;
     height: auto;
 
-    @include mq(pc){
-        width: 80%;
-    }
    
     &__wrapper {
         width: 90%;

@@ -3,20 +3,15 @@
     top: 0px;
     right: -300px;
     width: 300px;
-    height: 100%;
     background-color: #F2EDE9;
     z-index: 1000;
     overflow-y: auto;  //メニューをスクロール
     -webkit-overflow-scrolling: touch;
     @include mq(pc){
-        position: absolute;
-        right: 0;
-        width:inherit;
-        
-        }
-    
+        position: static;
+    }
     &__list {
-        margin-top: 150px;
+        margin-top: 40px;
         
         
     }
@@ -24,7 +19,7 @@
         display: block;
         font-weight: bold; ;
         color: #707070;
-        padding: 10px;  
+        padding: 30px 40px;  
         @include mq(pc){
             font-size: 1.5rem;
         }  
@@ -35,7 +30,7 @@
 .p-subnav__item > a {
     display: block;
     color: #707070;
-    padding: 10px 20px;
+    padding: 10px 60px;
     @include mq(pc){
         font-size: 1.25rem;
 

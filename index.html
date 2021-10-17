@@ -20,27 +20,96 @@
 </head>
 
 <body>
-    <div class="l-layer is-fade">
-        <header class="l-header p-header">
+    <div class="l-container">
+    <!--<div class="l-layer is-fade">-->
+        <div class="l-container__wrapper">
+            <header class="l-header p-header">
 
-            <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
+                <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-            <form class="p-header__search" action="HamburgerサイトのURL" method="get">
-                <label for="search" class="screen-reader-text"></label>
-                <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text" value="&#xf002;">
-                <input class="p-header__sbtn c-btn--search c-btn" type="submit" value="検索">
-            </form>
+                <form class="p-header__search" action="HamburgerサイトのURL" method="get">
+                    <label for="search" class="screen-reader-text"></label>
+                    <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text"
+                        value="&#xf002;">
+                    <input class="p-header__sbtn c-btn--search c-btn" type="submit" value="検索">
+                </form>
 
-        </header>
+            </header>
+
+            <main class="l-main">
+                <section class="l-top p-top">
+                    <!--メインヴィジュアルのsection-->
+                    <h2 class="p-top__title">ダミーサイト</h2>
+                </section>
+
+                <section class="l-main__wrapper">
+                    <!--TakeoutとEatinメニューを囲む-->
+                    <article class="l-main__branchmenu p-service__takeout">
+                        <!--Takeout-->
+                        <h3 class="p-service__head"><a href="">Take Out</a></h3>
+                        <div class="p-service__wrapper">
+                            <!--カードを囲む-->
+                            <dl class="p-service__inner">
+                                <dt class="p-service__list">Take Out</dt>
+                                <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                            </dl>
+                            <dl class="p-service__inner">
+                                <dt class="p-service__list">Take Out</dt>
+                                <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="l-main__branchmenu p-service__eatin">
+                        <!--Eatin-->
+                        <h3 class="p-service__head"><a href="">Eat In</a></h3>
+                        <div class="p-service__wrapper">
+                            <!--カードを囲む-->
+                            <dl class="p-service__inner">
+                                <dt class="p-service__list">Eat In</dt>
+                                <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                            </dl>
+                            <dl class="p-service__inner">
+                                <dt class="p-service__list">Eat in</dt>
+                                <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
+                            </dl>
+                        </div>
+                    </article>
+                </section>
+                <!--TakeoutとEatinメニューを囲むsection-->
+
+                <section class="l-main__map p-map">
+                    <!--Mapのsection-->
+                    <div class="p-map__wrap">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                        <div class="p-map__layer"></div>
+                        <!--地図のグレーカラー-->
+                        <div class="p-map__contnet">
+                            <h3 class="p-map__head">見出しが入ります</h3>
+                            <!--横線が入る-->
+                            <p class="p-map__txt">
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
 
         <aside class="l-sidebar">
-
-
             <button type="button" class="c-toggle">
                 <span class="c-toggle--btn is-open">Menu</span>
                 <span class="c-toggle--line is-open"></span>
             </button>
-
 
             <nav class="l-sidebar__menu p-gnav is-menu">
                 <ul class="p-gnav__list">
@@ -77,79 +146,7 @@
                     </li>
                 </ul>
             </nav>
-
-
         </aside>
-
-
-        <main class="l-main">
-            <section class="l-top p-top">
-                <!--メインヴィジュアルのsection-->
-                <h2 class="p-top__title">ダミーサイト</h2>
-            </section>
-
-            <section class="l-main__wrapper">
-                <!--TakeoutとEatinメニューを囲む-->
-                <article class="l-main__branchmenu p-service__takeout">
-                    <!--Takeout-->
-                    <h3 class="p-service__head"><a href="">Take Out</a></h3>
-                    <div class="p-service__wrapper">
-                        <!--カードを囲む-->
-                        <dl class="p-service__inner">
-                            <dt class="p-service__list">Take Out</dt>
-                            <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                        </dl>
-                        <dl class="p-service__inner">
-                            <dt class="p-service__list">Take Out</dt>
-                            <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                        </dl>
-                    </div>
-                </article>
-                <article class="l-main__branchmenu p-service__eatin">
-                    <!--Eatin-->
-                    <h3 class="p-service__head"><a href="">Eat In</a></h3>
-                    <div class="p-service__wrapper">
-                        <!--カードを囲む-->
-                        <dl class="p-service__inner">
-                            <dt class="p-service__list">Eat In</dt>
-                            <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                        </dl>
-                        <dl class="p-service__inner">
-                            <dt class="p-service__list">Eat in</dt>
-                            <dd class="p-service__desc">当店のテイクアウトで利用できる商品を掲載しています</dd>
-                        </dl>
-                    </div>
-                </article>
-            </section>
-            <!--TakeoutとEatinメニューを囲むsection-->
-
-            <section class="l-main__map p-map">
-                <!--Mapのsection-->
-                <div class="p-map__wrap">
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp"
-                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                    <div class="p-map__layer"></div>
-                    <!--地図のグレーカラー-->
-                    <div class="p-map__contnet">
-                        <h3 class="p-map__head">見出しが入ります</h3>
-                        <!--横線が入る-->
-                        <p class="p-map__txt">
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。
-                        </p>
-                    </div>
-                </div>
-
-            </section>
-        </main>
 
 
         <footer class="l-footer p-footer">
