@@ -1,32 +1,30 @@
 $(function() {
-  $(".c-toggle").on("click",function(){//メニューボタンをクリックしたとき
-    //$(".p-gnav__list").toggle(400);//0.4秒で表示したり非表示にしたりする
-    $(".is-open").toggleClass("active"); //Menuと✖の切り替え
-    $(".is-fade").toggleClass("cover");
-    if($('.p-gnav').hasClass('is-menu')){　　//横からメニュースライド
-      $('.p-gnav').removeClass('is-menu');
-      $(".p-gnav").animate({'marginRight':'300px'},300).addClass('on-menu');
-    }else{
-      $('.p-gnav').addClass('is-menu');
-      $(".p-gnav").animate({'marginRight':'0px'},300);
-    };
+  if (window.matchMedia( "(max-width: 1024px)" ).matches) {
+  
+      $(function() {
+        $(".c-toggle").on("click",function() {
+          $(".is-open").toggleClass("active");
+        //});
+      //});  
+        if($('.p-gnav').hasClass('is-menu')){　　//横からメニュースライド
+          $('.p-gnav').removeClass('is-menu');
+          $(".p-gnav").animate({'marginRight':'300px'},300);
+        }else{
+          $('.p-gnav').addClass('is-menu');
+          $(".p-gnav").animate({'marginRight':'0px'},300);
+        } 
+      })  //.is-open
+      })  //.c-toggle
+  }  
 
-
-   
-
-});
+  if(window.matchMedia( "(min-width: 1025px)" ).matches) {
+      $(function() {
+        $(".is-open").removeClass("active");
+          
+        })
     
-  
-     console.log ("成功");
-  });
-
-
-  
-
-  
-
-  
-
-
-
+    }
+     
+ 
+  });    //$(function)
 
