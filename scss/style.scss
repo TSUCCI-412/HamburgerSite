@@ -12,18 +12,18 @@
 //==================================
 // layout
 //==================================
-@import "./layout/top";
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/sidebar";
 @import "./layout/footer";
-@import "./layout/layer";
 
 //==================================
 // object
 
 /*Component-----------------------*/
 @import "./object/component/toggle";
+@import "./object/component/grid";
+@import "./object/component/layer";
 
 
 /*Project-------------------------*/
