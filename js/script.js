@@ -1,30 +1,24 @@
 $(function() {
-  if (window.matchMedia( "(max-width: 1024px)" ).matches) {
-  
-      $(function() {
-        $(".c-toggle").on("click",function() {
-          $(".is-open").toggleClass("active");
-        //});
-      //});  
-        if($('.p-gnav').hasClass('is-menu')){　　//横からメニュースライド
-          $('.p-gnav').removeClass('is-menu');
-          $(".p-gnav").animate({'marginRight':'300px'},300);
-        }else{
-          $('.p-gnav').addClass('is-menu');
-          $(".p-gnav").animate({'marginRight':'0px'},300);
-        } 
-      })  //.is-open
-      })  //.c-toggle
-  }  
+  //読み込み時とブラウザサイズを変更した時に処理
+  $(window).on('load resize', function(){
+    //ウィンドウサイズを取得する
+    var w = $(window).width();
+    //ウィンドウサイズが1024より小さい場合
+    if (window.matchMedia( "(max-width: 1024px)" ).matches) {
 
-  if(window.matchMedia( "(min-width: 1025px)" ).matches) {
-      $(function() {
-        $(".is-open").removeClass("active");
-          
-        })
-    
-    }
-     
- 
-  });    //$(function)
-
+      $(".c-toggle").on("click",function() {
+        $(".is-open").toggleClass("active");  
+        $('.is-menu').toggleClass('on-menu');
+        $('.is-fade').toggleClass("cover");
+      
+      })  
+     //ウィンドウサイズが1025より大きい場合 
+    }else{ (window.matchMedia( "(min-width: 1025px)" ).matches) 
+      
+      $(".c-toggle").on("click",function() {
+        $(".is-open").removeClass("active");  
+        $('.is-menu').removeClass('on-menu');
+      })
+    }  
+  });
+});
