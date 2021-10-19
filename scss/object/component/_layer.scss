@@ -1,0 +1,27 @@
+.c-layer {
+	width: 100%;
+	
+}
+
+.c-layer.cover {
+	position: fixed;
+	z-index: 900;   //全体にfadeがかかる
+}
+
+.c-layer::after {
+    /* 透過したグレーを重ねる */
+	background-color: #707070;
+    opacity: 0.7;
+	/* どの範囲に重ねるかを指定 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: ' ';
+    visibility: hidden;
+}
+
+.c-layer.cover::after {
+	visibility: visible;
+}
