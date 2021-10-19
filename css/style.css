@@ -129,9 +129,9 @@ ul, li {
 }
 
 .l-layer::after {
-  /* 透過した白を重ねる */
+  /* 透過したグレーを重ねる */
   background-color: #707070;
-  opacity: 0.5;
+  opacity: 0.7;
   /* どの範囲に重ねるかを指定 */
   position: fixed;
   top: 0;
@@ -171,7 +171,8 @@ ul, li {
 .c-toggle {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 5px;
+  z-index: 1100;
 }
 
 @media screen and (min-width: 1025px) {
@@ -201,10 +202,11 @@ ul, li {
 
 /* スマホの✖ */
 .c-toggle--line {
-  display: block;
+  display: inline-block;
   position: relative;
+  transition: all .4s;
   z-index: 1100;
-  right: 15px;
+  right: 35px;
   top: 0;
   width: 30px;
   height: 30px;
@@ -214,12 +216,10 @@ ul, li {
 .c-toggle--line::after, .c-toggle--line::before {
   content: "";
   position: absolute;
-  display: block;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: #707070;
   border-radius: 10px;
-  transition: .4s ease-in-out;
   display: none;
 }
 
@@ -408,18 +408,21 @@ ul, li {
   width: 300px;
   background-color: #F2EDE9;
   z-index: 1000;
-  overflow-y: auto;
+  height: 100vh;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
+  transition: all 0.6s;
 }
 
 @media screen and (min-width: 1025px) {
   .p-gnav {
     position: static;
+    overflow: visible;
   }
 }
 
 .p-gnav__list {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 
 .p-gnav__item > a {
@@ -445,6 +448,10 @@ ul, li {
   .p-subnav__item > a {
     font-size: 1.25rem;
   }
+}
+
+.p-gnav.on-menu {
+  right: 0;
 }
 
 .p-map__wrap {

@@ -9,9 +9,9 @@
 }
 
 .l-layer::after {
-    /* 透過した白を重ねる */
+    /* 透過したグレーを重ねる */
 	background-color: #707070;
-    opacity: 0.5;
+    opacity: 0.7;
 	/* どの範囲に重ねるかを指定 */
 	position: fixed;
 	top: 0;
