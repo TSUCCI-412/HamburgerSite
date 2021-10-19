@@ -1,0 +1,21 @@
+@include mq(pc){
+	.c-container {
+    	display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: auto 150px;
+		&__main {
+			grid-row: 1/2;
+			grid-column: 1/2;
+			
+		}
+	}
+	.l-sidebar {
+		grid-row: 1/2;
+		grid-column: 2/3;
+		background-color: #F2EDE9;
+	}
+	.l-footer {
+		grid-row: 2/3;
+		grid-column: 1/3;
+	}
+}

@@ -3,7 +3,6 @@
         overflow: hidden;
         position: relative;
         width: 100%;
-        height: 0;
         /* = height ÷ width × 100 */
         padding-bottom: 56.25%;
         min-height: 450px;  /*地図の高さを最低限確保する為*/
@@ -14,6 +13,7 @@
         width: 100%;  /*親要素の100%*/
         height: 100%;
         z-index: 10;
+        filter: brightness(60%); /*地図の明るさを調整*/
     }
     }
     &__layer {
@@ -21,10 +21,20 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         background-color: #666666;
         opacity: 0.6;
-        z-index: 100;    
+        z-index: 100; 
+        @include mq(tb){
+            height: 100%;
+        }
+        @include mq(pc){
+            width: 65%;
+        }   
+    }
+    &__content {
+        padding: 40px;
+
     }
    
     &__head {
@@ -51,7 +61,7 @@
         font-family: "M+1";
         font-size:0.875rem;
         font-weight: bold;
-        line-height: 1.5;
+        line-height: 2.0;
         color: #fff;
         position: absolute;
         top:100px;
@@ -59,11 +69,13 @@
         width: 85%;
         z-index: 200;  
         @include mq(tb){
-            line-height: 2.2;
+            line-height: 2.3;
         }
-        @include mq(pc){ 
+        @include mq(pc){
+            width: 60%; 
             font-size: 16px;
-            line-height: 2.0;
+            line-height: 2.2;
+            
         }
 
 
