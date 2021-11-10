@@ -28,7 +28,10 @@
         justify-content: center;
         position: relative;
         top: 80px;
-        right: 30px;
+        @include mq(pc) {
+            margin-right: 30px;
+        }
+        
     }
         
     

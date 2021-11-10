@@ -2,7 +2,7 @@
 .c-toggle {
    position: absolute;
    top: 20px;
-   right: 5px;
+   right: 1px;
    z-index: 1100;
    @include mq(pc){
       position: static;

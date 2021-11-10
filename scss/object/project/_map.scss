@@ -61,7 +61,7 @@
         font-family: "M+1";
         font-size:0.875rem;
         font-weight: bold;
-        line-height: 2.0;
+        line-height: 1.8;
         color: #fff;
         position: absolute;
         top:100px;
@@ -69,7 +69,7 @@
         width: 85%;
         z-index: 200;  
         @include mq(tb){
-            line-height: 2.3;
+            line-height: 2.0;
         }
         @include mq(pc){
             width: 60%; 
@@ -77,8 +77,6 @@
             line-height: 2.2;
             
         }
-
-
 }
 
     }

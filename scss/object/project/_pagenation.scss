@@ -1,0 +1,132 @@
+//ページ送りの矢印　≪ 
+.p-pagenation__arrow-pre {
+    position: relative;
+    //top: -8px; //矢印の位置//
+    display: inline-block;
+    padding-left: 20px;
+    margin: 0 15px;
+    
+    &::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border: 0px;
+        border-top: solid 2px #707070;
+        border-right: solid 2px #707070;
+            -ms-transform: rotate(225deg);
+            -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+        position: absolute;
+        top: 25%;
+        left: 0;
+    
+    }
+    &::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border: 0px;
+        border-top: solid 2px #707070;
+        border-right: solid 2px #707070;
+            -ms-transform: rotate(225deg);
+            -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+        position: absolute;
+        top: 25%;
+        left: 8px;
+        
+    }
+
+}
+
+
+//ページ送りの矢印　≫
+.p-pagenation__arrow-next {
+    position: relative;
+    //top: -8px;
+    display: inline-block;
+    padding-left: 20px;
+    margin: 0 15px;
+    &::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border: 0px;
+        border-top: solid 2px #707070;
+        border-right: solid 2px #707070;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 25%;
+        left: 0;
+         
+    }
+    &::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border: 0px;
+        border-top: solid 2px #707070;
+        border-right: solid 2px #707070;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 25%;
+        left: 8px;
+        
+    }
+}
+
+.p-pagenation {
+    @include mq(pc) {
+        max-width: 1000px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        color: #707070;
+        line-height: 16px;
+        //font-size: 0.8rem;
+        margin-top: 50px;
+        @include mq(tb) {
+            justify-content: center;
+            //margin: 50px auto;
+        }
+    }
+    &__top {
+        display: none;
+        @include mq(tb) {
+        display: block;
+        line-height: 30px;  //文字を中央配置にするため//
+        }
+    }
+    &__number {
+        display: none;
+        @include mq(tb) {
+            display: block;
+            border: solid 2px #707070;
+            padding: 5px 8px;
+            margin-right: 10px;
+            &:nth-child(11) {
+            margin-right: 0;
+            }
+        }
+        
+    }
+    &__text {
+    display: block;
+    padding: 5px;
+    @include mq(tb) {
+        display: none;
+    }
+    }
+}
+
+//　≫と次への配置を逆にする 
+.p-pagenation__arrow-next > .p-pagenation__text {
+    position: absolute;
+    width: 45px; 
+    right: 10px;
+}
