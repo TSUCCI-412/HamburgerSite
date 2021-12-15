@@ -14,7 +14,7 @@
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul {
+ul {
   list-style: none;
 }
 
@@ -117,8 +117,14 @@ ul, li {
 .c-toggle {
   position: absolute;
   top: 20px;
-  right: 1px;
+  right: 0px;
   z-index: 1100;
+}
+
+@media screen and (min-width: 600px) {
+  .c-toggle {
+    right: 5px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -237,7 +243,7 @@ ul, li {
 
 .c-card {
   background-color: #3C2B1C;
-  height: 340px;
+  height: 355px;
 }
 
 .c-card__desc {
@@ -431,18 +437,30 @@ ul, li {
   margin-left: 35px;
 }
 
+@media screen and (min-width: 600px) {
+  .p-top__title {
+    font-size: 3.75rem;
+  }
+}
+
 .p-top__title > p {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
 .p-top__archive {
-  height: 285px;
+  height: 283px;
   background-image: url(../img/takeout.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-top__archive {
+    height: 239px;
+  }
 }
 
 .p-top__archive::before {
@@ -456,13 +474,41 @@ ul, li {
   display: block;
 }
 
+@media screen and (min-width: 1025px) {
+  .p-top__archive::before {
+    width: 75%;
+  }
+}
+
 .p-top__single {
   height: 225px;
+  width: auto;
   background-image: url(../img/cheeseburger.jpg);
   background-size: cover;
   object-position: center;
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .p-top__single {
+    height: 500px;
+  }
+}
+
+.p-top__page {
+  height: 225px;
+  background-image: url(../img/shopphoto.jpg);
+  background-size: cover;
+  object-position: center;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .p-top__page {
+    height: 500px;
+  }
 }
 
 .p-gnav {
@@ -658,6 +704,7 @@ ul, li {
 
 .p-footer__info {
   padding-top: 40px;
+  padding-bottom: 35px;
   font-size: 1.2rem;
 }
 
@@ -670,8 +717,8 @@ ul, li {
 
 .p-footer__copyright {
   display: block;
-  padding-top: 40px;
   font-size: 0.875rem;
+  padding-bottom: 30x;
 }
 
 .p-article {
@@ -808,12 +855,21 @@ ul, li {
   justify-content: space-between;
   color: #707070;
   line-height: 16px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 @media screen and (min-width: 600px) {
   .p-pagenation__list {
     justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-pagenation__list {
+    margin-bottom: 60px;
+    margin-top: 150px;
   }
 }
 
@@ -862,7 +918,19 @@ ul, li {
 }
 
 .p-single__thumbnail {
-  margin: 0 60px;
+  margin: 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-single__thumbnail {
+    margin: 0 60px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-single__thumbnail {
+    margin: 0 100px;
+  }
 }
 
 .p-single__thumbnail--top {
@@ -888,7 +956,7 @@ ul, li {
 .p-single__thumbnail--bottom {
   display: block;
   width: 100%;
-  padding: 0 66px 240px 66px;
+  padding: 0 34px 30px 34px;
 }
 
 @media screen and (min-width: 600px) {
@@ -928,6 +996,82 @@ ul, li {
 
 .p-single__flex > p {
   width: 47%;
+}
+
+.p-single__list > ol, ul {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.p-single__list-center {
+  padding-left: 18px;
+}
+
+.p-single__list-bottom {
+  margin-bottom: 40px;
+}
+
+.p-single__code {
+  height: 230px;
+  background-color: #F5F5F5;
+}
+
+.p-single__table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.p-single__table table {
+  width: 100%;
+  border: 1px solid;
+}
+
+.p-single__table tr {
+  height: 77px;
+  border: 1px solid;
+}
+
+.p-single__table th {
+  border: 1px solid;
+  width: 35%;
+  min-width: 135px;
+  padding: 30px;
+}
+
+.p-single__table td {
+  width: 65%;
+  min-width: 200px;
+  padding: 30px;
+}
+
+.p-single__btn {
+  height: 81px;
+  width: 100%;
+  max-width: 429px;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  background-color: #F2EDE9;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.p-single__btn-text {
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 177px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-single__btn-text {
+    margin-bottom: 228px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-single__btn-text {
+    margin-bottom: 353px;
+  }
 }
 
 /*Utility------------------------*/

@@ -15,6 +15,9 @@
     font-size: 2.25rem;
     font-weight: bold;
     margin-left: 35px;
+    @include mq(tb) {
+        font-size: 3.75rem;
+    }
     & > p {
         font-size: 1.25rem;
         font-weight: bold;
@@ -24,12 +27,15 @@
 }
 
 .p-top__archive {
-    height: 285px;
+    height: 283px;
     background-image: url(../img/takeout.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
+    @include mq(pc) {
+        height: 239px;
+    }
     &::before {
         content: '';
         /* ↓暗いオーバーレイを半透明で配置 */
@@ -39,14 +45,35 @@
         width: 100%;
         height: inherit;
         display: block;
-    }
+        @include mq(pc) {
+            width: 75%;
+        }
+        }
 }
 
 .p-top__single {
     height: 225px;
+    width: auto;
     background-image: url(../img/cheeseburger.jpg);
     background-size: cover;
     object-position: center;
     display: flex;
     align-items: center;
+    @include mq(tb) {
+        height: 500px;
+    }
+    
+}
+
+.p-top__page {
+    height: 225px;
+    background-image: url(../img/shopphoto.jpg);
+    background-size: cover;
+    object-position: center;
+    display: flex;
+    align-items: center;
+    @include mq(tb) {
+        height: 500px;
+    }
+
 }

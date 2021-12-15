@@ -1,6 +1,12 @@
 .p-single {
     &__thumbnail {
-        margin: 0 60px;
+        margin: 0 20px;
+        @include mq(tb) {
+            margin: 0 60px;
+        }
+        @include mq(pc) {
+            margin: 0 100px;
+        }
         &--top {
             display: block;
             height: 130px;
@@ -17,7 +23,7 @@
         &--bottom {
             display: block;
             width: 100%;
-            padding: 0 66px 240px 66px
+            padding: 0 34px 30px 34px;
         }
         
         &__list {
@@ -54,3 +60,73 @@
     }
     
 }
+
+.p-single__list > ol,ul {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.p-single__list-center {
+    padding-left: 18px;
+}
+.p-single__list-bottom {
+    margin-bottom: 40px;
+}
+
+.p-single__code {
+    height: 230px;
+    background-color: #F5F5F5;
+    //& > pre {
+        //padding: 50px
+    //}
+    
+}
+.p-single__table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    & table {
+        width: 100%;
+        border: 1px solid;
+        }
+    & tr {
+        height: 77px;
+        border: 1px solid;
+    }
+    & th {
+        border: 1px solid;
+        width: 35%;
+        min-width: 135px;
+        padding: 30px;
+    }
+    & td {
+        width: 65%;
+        min-width: 200px;
+        padding: 30px;
+    }
+    
+}
+
+.p-single__btn {
+    height: 81px;
+    width: 100%;
+    max-width: 429px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    background-color: #F2EDE9;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.p-single__btn-text {
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 177px;
+    @include mq(tb) {
+        margin-bottom: 228px;
+    }
+    @include mq(pc) {
+        margin-bottom: 353px;
+    }
+}
+

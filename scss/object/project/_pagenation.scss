@@ -89,10 +89,16 @@
         color: #707070;
         line-height: 16px;
         //font-size: 0.8rem;
-        margin-top: 50px;
+        margin-top: 60px;
         @include mq(tb) {
             justify-content: center;
-            //margin: 50px auto;
+            margin-bottom: 30px;
+            margin-top: 110px;
+        }
+        @include mq(pc) {
+            margin-bottom: 60px;
+            margin-top: 150px;
+            
         }
     }
     &__top {
