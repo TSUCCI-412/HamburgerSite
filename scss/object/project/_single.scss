@@ -61,6 +61,10 @@
     
 }
 
+.u-margin {
+    margin-bottom: 200px;
+}
+
 .p-single__list > ol,ul {
     padding-bottom: 10px;
     padding-top: 10px;
@@ -74,15 +78,16 @@
 
 .p-single__code {
     height: 230px;
+    padding: 50px;
     background-color: #F5F5F5;
-    //& > pre {
-        //padding: 50px
-    //}
+    & > pre {
+        line-height: 1.4;
+    }
     
 }
 .p-single__table {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom:30px;
     
     & table {
         width: 100%;

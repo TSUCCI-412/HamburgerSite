@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/***The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
 /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
   all: unset;
@@ -267,6 +267,145 @@ ul, li {
 .c-card__text {
   color: #fff;
   padding: 5px 0;
+}
+
+.c-pagenation__arrow-pre {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin: 0 15px;
+}
+
+.c-pagenation__arrow-pre::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-top: solid 2px #707070;
+  border-right: solid 2px #707070;
+  transform: rotate(225deg);
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+
+.c-pagenation__arrow-pre::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-top: solid 2px #707070;
+  border-right: solid 2px #707070;
+  transform: rotate(225deg);
+  position: absolute;
+  top: 25%;
+  left: 8px;
+}
+
+.c-pagenation__arrow-next {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin: 0 15px;
+}
+
+.c-pagenation__arrow-next::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-top: solid 2px #707070;
+  border-right: solid 2px #707070;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+
+.c-pagenation__arrow-next::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-top: solid 2px #707070;
+  border-right: solid 2px #707070;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 25%;
+  left: 8px;
+}
+
+@media screen and (min-width: 1025px) {
+  .c-pagenation {
+    max-width: 1000px;
+  }
+}
+
+.c-pagenation__list {
+  display: flex;
+  justify-content: space-between;
+  color: #707070;
+  line-height: 16px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 600px) {
+  .c-pagenation__list {
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .c-pagenation__list {
+    margin-bottom: 60px;
+    margin-top: 150px;
+  }
+}
+
+.c-pagenation__top {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .c-pagenation__top {
+    display: block;
+    line-height: 30px;
+  }
+}
+
+.c-pagenation__number {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .c-pagenation__number {
+    display: block;
+    border: solid 2px #707070;
+    padding: 5px 8px;
+    margin-right: 10px;
+  }
+  .c-pagenation__number:nth-child(11) {
+    margin-right: 0;
+  }
+}
+
+.c-pagenation__text {
+  display: block;
+  padding: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .c-pagenation__text {
+    display: none;
+  }
+}
+
+.c-pagenation__arrow-next > .c-pagenation__text {
+  position: absolute;
+  width: 45px;
+  right: 10px;
 }
 
 /*Project-------------------------*/
@@ -778,145 +917,6 @@ ul, li {
   margin-bottom: 13px;
 }
 
-.p-pagenation__arrow-pre {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  margin: 0 15px;
-}
-
-.p-pagenation__arrow-pre::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border: 0px;
-  border-top: solid 2px #707070;
-  border-right: solid 2px #707070;
-  transform: rotate(225deg);
-  position: absolute;
-  top: 25%;
-  left: 0;
-}
-
-.p-pagenation__arrow-pre::after {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border: 0px;
-  border-top: solid 2px #707070;
-  border-right: solid 2px #707070;
-  transform: rotate(225deg);
-  position: absolute;
-  top: 25%;
-  left: 8px;
-}
-
-.p-pagenation__arrow-next {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  margin: 0 15px;
-}
-
-.p-pagenation__arrow-next::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border: 0px;
-  border-top: solid 2px #707070;
-  border-right: solid 2px #707070;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 25%;
-  left: 0;
-}
-
-.p-pagenation__arrow-next::after {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border: 0px;
-  border-top: solid 2px #707070;
-  border-right: solid 2px #707070;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 25%;
-  left: 8px;
-}
-
-@media screen and (min-width: 1025px) {
-  .p-pagenation {
-    max-width: 1000px;
-  }
-}
-
-.p-pagenation__list {
-  display: flex;
-  justify-content: space-between;
-  color: #707070;
-  line-height: 16px;
-  margin-top: 60px;
-}
-
-@media screen and (min-width: 600px) {
-  .p-pagenation__list {
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 110px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .p-pagenation__list {
-    margin-bottom: 60px;
-    margin-top: 150px;
-  }
-}
-
-.p-pagenation__top {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .p-pagenation__top {
-    display: block;
-    line-height: 30px;
-  }
-}
-
-.p-pagenation__number {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .p-pagenation__number {
-    display: block;
-    border: solid 2px #707070;
-    padding: 5px 8px;
-    margin-right: 10px;
-  }
-  .p-pagenation__number:nth-child(11) {
-    margin-right: 0;
-  }
-}
-
-.p-pagenation__text {
-  display: block;
-  padding: 5px;
-}
-
-@media screen and (min-width: 600px) {
-  .p-pagenation__text {
-    display: none;
-  }
-}
-
-.p-pagenation__arrow-next > .p-pagenation__text {
-  position: absolute;
-  width: 45px;
-  right: 10px;
-}
-
 .p-single__thumbnail {
   margin: 0 20px;
 }
@@ -998,6 +998,10 @@ ul, li {
   width: 47%;
 }
 
+.u-margin {
+  margin-bottom: 200px;
+}
+
 .p-single__list > ol, ul {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -1013,7 +1017,12 @@ ul, li {
 
 .p-single__code {
   height: 230px;
+  padding: 50px;
   background-color: #F5F5F5;
+}
+
+.p-single__code > pre {
+  line-height: 1.4;
 }
 
 .p-single__table {

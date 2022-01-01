@@ -1,5 +1,5 @@
 //ページ送りの矢印　≪ 
-.p-pagenation__arrow-pre {
+.c-pagenation__arrow-pre {
     position: relative;
     //top: -8px; //矢印の位置//
     display: inline-block;
@@ -41,7 +41,7 @@
 
 
 //ページ送りの矢印　≫
-.p-pagenation__arrow-next {
+.c-pagenation__arrow-next {
     position: relative;
     //top: -8px;
     display: inline-block;
@@ -79,7 +79,7 @@
     }
 }
 
-.p-pagenation {
+.c-pagenation {
     @include mq(pc) {
         max-width: 1000px;
     }
@@ -131,7 +131,7 @@
 }
 
 //　≫と次への配置を逆にする 
-.p-pagenation__arrow-next > .p-pagenation__text {
+.c-pagenation__arrow-next > .c-pagenation__text {
     position: absolute;
     width: 45px; 
     right: 10px;
