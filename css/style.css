@@ -84,24 +84,32 @@ ul, li {
 
 .l-main {
   width: 100%;
-  height: auto;
 }
 
 .l-main__wrapper {
-  width: 90%;
-  margin: auto;
+  margin: 20px 20px 50px;
 }
 
 @media screen and (min-width: 600px) {
   .l-main__wrapper {
     display: grid;
-    gap: 25px;
+    gap: 40px;
     grid-template-columns: 1fr 1fr;
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-main__wrapper {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    margin: 110px;
   }
 }
 
 .l-main__branchmenu {
-  margin-bottom: 15px;
+  height: auto;
 }
 
 .l-sidebar {
@@ -409,54 +417,81 @@ ul, li {
 }
 
 /*Project-------------------------*/
-.p-service__takeout {
+.p-service--takeout {
   background-image: url(../img/takeout.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 700px;
+  margin-bottom: 20px;
 }
 
-.p-service__eatin {
+@media screen and (min-width: 600px) {
+  .p-service--takeout {
+    margin-bottom: 0;
+  }
+}
+
+.p-service--eatin {
   background-image: url(../img/eatin.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 700px;
 }
 
 　　
 .p-service__wrapper {
   width: 80%;
-  margin: auto;
+  margin: 10px;
 }
 
 .p-service__head {
-  font-size: 30px;
+  font-size: 41px;
   color: #fff;
   margin-bottom: 250px;
+  font-family: "Roboto";
+}
+
+@media screen and (min-width: 600px) {
+  .p-service__head {
+    font-size: 44px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-service__head {
+    font-size: 60px;
+  }
 }
 
 .p-service__head > a {
   display: block;
-  padding: 15px;
+  padding: 20px;
 }
 
 .p-service__head > a::after {
   display: block;
   content: "";
   border: solid 2px;
-  width: 30px;
+  width: 33px;
   background: #fff;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-service__head > a::after {
+    width: 36px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-service__head > a::after {
+    width: 63px;
+  }
 }
 
 .p-service__inner {
   background-color: #fff;
   opacity: .8;
   height: 170px;
-  width: 90%;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 .p-service__list {
@@ -709,7 +744,7 @@ ul, li {
   width: 100%;
   /* = height ÷ width × 100 */
   padding-bottom: 56.25%;
-  min-height: 450px;
+  min-height: 710px;
   /*地図の高さを最低限確保する為*/
 }
 
@@ -744,7 +779,7 @@ ul, li {
 
 @media screen and (min-width: 1025px) {
   .p-map__layer {
-    width: 65%;
+    width: 70%;
   }
 }
 
@@ -758,10 +793,17 @@ ul, li {
   font-weight: bold;
   color: #fff;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 40px;
+  left: 40px;
   width: 90%;
   z-index: 200;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-map__head {
+    top: 83px;
+    left: 119px;
+  }
 }
 
 .p-map__head::after {
@@ -770,18 +812,24 @@ ul, li {
   width: 75px;
   background-color: #fff;
   border: solid 1px;
-  margin-top: 15px;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-map__head::after {
+    margin: 55px 0 64px;
+  }
 }
 
 .p-map__txt {
   font-family: "M+1";
   font-size: 0.875rem;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 2.2;
   color: #fff;
   position: absolute;
-  top: 100px;
-  left: 30px;
+  top: 125px;
+  left: 40px;
   width: 85%;
   z-index: 200;
 }
@@ -794,9 +842,11 @@ ul, li {
 
 @media screen and (min-width: 1025px) {
   .p-map__txt {
-    width: 60%;
+    top: 253px;
+    left: 119px;
+    width: 50%;
     font-size: 16px;
-    line-height: 2.2;
+    line-height: 1.8;
   }
 }
 
