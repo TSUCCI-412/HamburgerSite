@@ -1,24 +1,16 @@
-.p-single {
-    &__thumbnail {
-        margin: 0 20px;
+.p-single__thumbnail {
+    &--top {
+        display: block;
+        height: 130px;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
         @include mq(tb) {
-            margin: 0 60px;
-        }
+            height: 264px
+            }
         @include mq(pc) {
-            margin: 0 100px;
+            height: 500px
         }
-        &--top {
-            display: block;
-            height: 130px;
-            width: 100%;
-            object-fit: cover;
-            object-position: bottom;
-            @include mq(tb) {
-                height: 264px
-            }
-            @include mq(pc) {
-                height: 500px
-            }
         }
         &--bottom {
             display: block;
@@ -40,9 +32,9 @@
         }
     
         
-    }
     
-    &__flex {
+    
+    &--flex {
         display: flex;
         justify-content: space-between;
         margin: 30px auto;
@@ -55,11 +47,14 @@
             height: 50%;
         }
         & > p {
+            line-height: 1.4;
             width: 47%;
         }
     }
     
+
 }
+
 
 .u-margin {
     margin-bottom: 200px;
@@ -78,9 +73,9 @@
 
 .p-single__code {
     height: 230px;
-    padding: 50px;
     background-color: #F5F5F5;
-    & > pre {
+    padding: 25px 50px;
+    & > code {
         line-height: 1.4;
     }
     

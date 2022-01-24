@@ -9,8 +9,7 @@
     <meta name="description" content="ハンバーガーサイト作成課題">
 
     <!-- style -->
-    <link rel="stylesheet" href="../scss/foundation/reset.scss">
-    <!--The new CSS Reset - version 1.2.0 (last updated 23.7.2021)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -27,11 +26,11 @@
 
                     <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-                    <form class="p-header__search" action="HamburgerサイトのURL" method="get">
+                    <form class="p-search-form" action="HamburgerサイトのURL" method="get">
                         <label for="search" class="screen-reader-text"></label>
-                        <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text"
+                        <input id="search" name="keyword" class="p-search-form__keyword fas fa-search" type="text"
                             value="&#xf002;">
-                        <input class="p-header__sbtn c-btn" type="submit" value="検索">
+                        <input class="p-search-form__submit c-btn" type="submit" value="検索">
                     </form>
 
                 </header>
@@ -179,7 +178,7 @@
 
 
         <footer class="l-footer p-footer">
-            <div class="p-footer__info">
+            <div class="p-footer__menu">
                 <a class="p-footer__list" href="">ショップ情報</a>
                 <a class="p-footer__list" href="">ヒストリー</a>
             </div>

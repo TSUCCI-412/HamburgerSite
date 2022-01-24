@@ -9,8 +9,7 @@
     <meta name="description" content="ハンバーガーサイト作成課題">
 
     <!-- style -->
-    <link rel="stylesheet" href="../scss/foundation/reset.scss">
-    <!--The new CSS Reset - version 1.2.0 (last updated 23.7.2021)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -29,22 +28,20 @@
 
                     <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-                    <form class="p-header__search" action="HamburgerサイトのURL" method="get">
+                    <form class="p-search-form" action="HamburgerサイトのURL" method="get">
                         <label for="search" class="screen-reader-text"></label>
-                        <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text"
+                        <input id="search" name="keyword" class="p-search-form__keyword fas fa-search" type="text"
                             value="&#xf002;">
-                        <input class="p-header__sbtn c-btn" type="submit" value="検索">
+                        <input class="p-search-form__submit c-btn" type="submit" value="検索">
                     </form>
-
                 </header>
-
-                <main class="l-main">
+                <main class="l-main--single">
                     <!--メインヴィジュアルのsection-->
                     <section class="l-main__top p-mainvisual--page">
-                        <h2 class="p-mainvisual__title">ショップについて</h2>
+                        <h2 class="p-mainvisual__title">h1 チーズバーガー</h2>
                     </section>
 
-                    <section>
+                    <section class="u-article__wrapper">
                         <article class="p-article">
                             <h2 class="p-article__title">見出しh2</h2>
                             <p class="p-article__text">
@@ -80,14 +77,18 @@
                         </article>
                         <article class="p-single__thumbnail">
                             <img class="p-single__thumbnail--top" src="../img/setmenu.jpg" alt="">
-                            <div class="p-single__flex u-margin">
+                            <div class="p-single__thumbnail--flex">
                                 <img src="../img/setmenu.jpg" alt="">
                                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                                     </li>
                                 </p>
                             </div>
-                            
-                            
+                            <div class="p-single__thumbnail--flex">
+                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                    </li>
+                                </p>
+                                <img src="../img/setmenu.jpg" alt="">
+                            </div>
                             <img class="p-single__thumbnail--bottom" src="../img/setmenu.jpg" alt="">
 
                             <div class="p-single__thumbnail__list">
@@ -101,8 +102,9 @@
                                 <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
                                 <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
                             </div>
-                            　　　　　
 
+                        </article>
+                        <article>
                             <div class="p-single__list">
                                 <ol>
                                     <li>1.リストリストリスト</li>
@@ -130,19 +132,19 @@
                                     <li>リストリストリスト</li>
                                 </ul>
                             </div>
-
-                            <div class="p-single__code">
-                                <pre>
-                                    <code>
-                                        &lt;html&gt;
-                                            &lt;head&gt;
-                                            &lt;/head&gt;
-                                            &lt;body&gt;
-                                            &lt;/body&gt;                                            </body>
-                                        &lt;/html&gt;
+                        </article>
+                        <article>
+                            <pre class="p-single__code">
+                                <code>                
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;                
+&lt;/html&gt;
                                     </code>
                                 </pre>
-                            </div>
+                            </article>
 
                             <div class="p-single__table c-table">
                                 <table>
@@ -221,7 +223,7 @@
 
 
         <footer class="l-footer p-footer">
-            <div class="p-footer__info">
+            <div class="p-footer__menu">
                 <a class="p-footer__list" href="">ショップ情報</a>
                 <a class="p-footer__list" href="">ヒストリー</a>
             </div>
