@@ -9,8 +9,8 @@
     <meta name="description" content="ハンバーガーサイト作成課題">
 
     <!-- style -->
-    <link rel="stylesheet" href="./scss/foundation/_reset.scss">
-    <!--The new CSS Reset - version 1.2.0 (last updated 23.7.2021)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <!--<link rel="stylesheet" href="../scss/foundation/reset.scss">-->
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -29,25 +29,25 @@
 
                     <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-                    <form class="p-header__search" action="HamburgerサイトのURL" method="get">
+                    <form class="p-search-form" action="HamburgerサイトのURL" method="get">
                         <label for="search" class="screen-reader-text"></label>
-                        <input id="search" name="searchword" class="p-header__sbox fas fa-search" type="text"
+                        <input id="search" name="keyword" class="p-search-form__keyword fas fa-search" type="text"
                             value="&#xf002;">
-                        <input class="p-header__sbtn c-btn" type="submit" value="検索">
+                        <input class="p-search-form__submit c-btn" type="submit" value="検索">
                     </form>
 
                 </header>
 
                 <main class="l-main">
                     <!--メインヴィジュアルのsection-->
-                    <section class="l-main__top p-top">
-                        <h2 class="p-top__title">ダミーサイト</h2>
+                    <section class="l-main__top p-mainvisual">
+                        <h2 class="p-mainvisual__title">ダミーサイト</h2>
                     </section>
 
                     <!--TakeoutとEatinメニューを囲む-->
-                    <section class="l-main__wrapper">
+                    <section class="l-main__wrapper p-service">
                         <!--Takeout-->
-                        <article class="l-main__branchmenu p-service--takeout">
+                        <article class="p-service--takeout">
                             <h3 class="p-service__head"><a href="">Take Out</a></h3>
                             <!--カードを囲む-->
                             <div class="p-service__wrapper">
@@ -62,7 +62,7 @@
                             </div>
                         </article>
                         <!--Eatin-->
-                        <article class="l-main__branchmenu p-service--eatin">
+                        <article class="p-service--eatin">
                             <h3 class="p-service__head"><a href="">Eat In</a></h3>
                             <!--カードを囲む-->
                             <div class="p-service__wrapper">
@@ -81,28 +81,27 @@
 
                     <!--Mapのsection-->
                     <section class="l-main__map p-map">
-                        <div class="p-map__wrap">
 
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp"
-                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                                <!--地図のグレーカラー-->
-                            <div class="p-map__layer"></div>
-                            <div class="p-map__content">
-                                <h3 class="p-map__head">見出しが入ります</h3>
-                                <!--疑似要素で横線追加-->
-                                <p class="p-map__txt">
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                            </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13046.008691578849!2d136.87702724578173!3d35.169034399033535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1631351592153!5m2!1sja!2sjp"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <!--地図のグレーカラー-->
+                        <div class="p-map__layer"></div>
+                        <div class="p-map__content">
+                            <h3 class="p-map__head">見出しが入ります</h3>
+                            <!--疑似要素で横線追加-->
+                            <p class="p-map__txt">
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                テキストが入ります。テキストが入ります。テキストが入ります。
+                            </p>
                         </div>
+
+
                     </section>
                 </main>
             </div>
@@ -155,10 +154,10 @@
 
 
         <footer class="l-footer p-footer">
-            <div class="p-footer__info">
-                <a class="p-footer__list" href="">ショップ情報</a>
-                <a class="p-footer__list" href="">ヒストリー</a>
-            </div>
+            <ul class="p-footer__menu">
+                <li class="p-footer__list"><a href="">ショップ情報</a></li>
+                <li class="p-footer__list"><a href="">ヒストリー</a></li>
+            </ul>
             <p><small class="p-footer__copyright">Copyright: RaiseTech</small></p>
 
         </footer>

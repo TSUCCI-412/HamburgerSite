@@ -15,12 +15,10 @@
             display: grid;
             gap: 80px;    //2つの写真の隙間
             grid-template-columns: 1fr 1fr;
-            margin: 110px;
+            margin: 110px 120px 130px;
         }
     }
-    &__branchmenu {
-        height: auto;
-    }
+    
     }
     
 

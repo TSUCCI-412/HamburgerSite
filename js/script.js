@@ -13,7 +13,7 @@ $(function() {
       
       })  
      //ウィンドウサイズが1025より大きい場合 
-    }else{ (window.matchMedia( "(min-width: 1025px)" ).matches) 
+    }else{ (window.matchMedia( "(min-width: 1024px)" ).matches) 
       
       $(".c-toggle").on("click",function() {
         $(".is-open").removeClass("active");  
@@ -22,3 +22,6 @@ $(function() {
     }  
   });
 });
+
+
+
