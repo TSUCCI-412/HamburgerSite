@@ -444,6 +444,7 @@ ul, li {
 
 .l-main {
   width: 100%;
+  height: auto;
 }
 
 .l-main__wrapper {
@@ -1043,13 +1044,16 @@ ul, li {
 }
 
 .p-map {
-  overflow: hidden;
   position: relative;
   width: 100%;
   /* = height ÷ width × 100 */
+  height: 100%;
+}
+
+.p-map::before {
+  content: "";
+  display: block;
   padding-bottom: 56.25%;
-  min-height: 1000px;
-  /*地図の高さを最低限確保する為*/
 }
 
 .p-map > iframe {
@@ -1091,6 +1095,8 @@ ul, li {
   position: absolute;
   z-index: 200;
   padding: 40px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -1106,7 +1112,6 @@ ul, li {
   font-size: 1.875rem;
   font-weight: bold;
   color: #fff;
-  z-index: 200;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1136,7 +1141,6 @@ ul, li {
   font-weight: bold;
   line-height: 2.3;
   color: #fff;
-  z-index: 200;
 }
 
 @media screen and (min-width: 1025px) {
