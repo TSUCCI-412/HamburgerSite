@@ -1,8 +1,5 @@
 .l-main {
     width: 100%;
-    height: auto;
-
-   
     &__wrapper {
         margin: 20px 20px 50px;
         @include mq(tb){
