@@ -1,24 +1,49 @@
 .c-card {
-    background-color: #3C2B1C;
-    height: 355px;
-    &__desc {
-        padding: 17px;
-        margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+        @include mq(tb) {
+            display: flex;
+        }
+    
+    &__thumbnail {
+        width: 100%;
+        @include mq(tb) {
+            width: 50%;
+        }
+    }
+    &__body {
+        background-color: #3C2B1C;
+        padding: 30px 17px 43px;
+        @include mq(tb) {
+            width: 50%;
+        }
     }
     &__head {
         color: #fff;
         font-size: 1.25rem;
         font-weight: bold;
-        padding: 10px 0;
+        margin-bottom: 24px;
     }
     &__subhead {
         color: #fff;
         font-weight: bold;
-        padding: 5px 0;
+        margin-bottom: 10px;
     }
     &__text {
         color: #fff;
-        padding: 5px 0;
+        margin-bottom: 43px;
+        
+    }
+    &__link {
+        display: block;
+        margin: 0 auto;
+        background-color: #fff;
+        width: 163px;
+        height: 42px;
+        border-radius: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: #707070;
     }
     
 }
