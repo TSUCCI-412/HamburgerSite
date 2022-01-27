@@ -80,32 +80,29 @@
 }
 
 .c-pagenation {
+    margin-top: 60px;
+    margin-bottom: 30px; 
+    @include mq(tb) {
+        margin-top: 105px;
+    }
     @include mq(pc) {
-        max-width: 1000px;
+        margin-top: 150px;
+        margin-bottom: 65px;
     }
     &__list {
         display: flex;
         justify-content: space-between;
         color: #707070;
         line-height: 16px;
-        //font-size: 0.8rem;
-        margin-top: 60px;
         @include mq(tb) {
             justify-content: center;
-            margin-bottom: 30px;
-            margin-top: 110px;
-        }
-        @include mq(pc) {
-            margin-bottom: 60px;
-            margin-top: 150px;
-            
         }
     }
     &__top {
         display: none;
         @include mq(tb) {
         display: block;
-        line-height: 30px;  //文字を中央配置にするため//
+        line-height: 2.0;  //文字を中央配置にするため//
         }
     }
     &__number {
