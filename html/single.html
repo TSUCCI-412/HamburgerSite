@@ -25,19 +25,19 @@
             <!--grid用-->
             <div class="c-container__main">
                 <header class="l-header p-header">
+                    <button type="button" class="p-header__btn c-btn--sp is-open">Menu</button>
+                    <div class="p-header__wrap">
+                        <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
 
-                    <h1 class="p-header__title"><a href="#">Hamburger</a></h1>
-
-                    <form class="p-search-form" action="HamburgerサイトのURL" method="get">
-                        <label for="search" class="screen-reader-text"></label>
-                        <input id="search" name="keyword" class="p-search-form__keyword fas fa-search" type="text"
-                            value="&#xf002;">
-                        <input class="p-search-form__submit c-btn" type="submit" value="検索">
-                    </form>
-
+                        <form class="p-search-form" action="HamburgerサイトのURL" method="get">
+                            <label for="search" class="screen-reader-text"></label>
+                            <input id="search" name="keyword" class="p-search-form__keyword fas fa-search" type="text"
+                                value="&#xf002;">
+                            <input class="p-search-form__submit c-btn--search c-btn" type="submit" value="検索">
+                        </form>
+                    </div>
                 </header>
-
-                <main class="l-main--single">
+                <main class="l-main">
                     <!--メインヴィジュアルのsection-->
                     <section class="l-main__top p-mainvisual--single">
                         <h2 class="p-mainvisual__title">h1 チーズバーガー</h2>
@@ -74,97 +74,95 @@
                                     引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ
                                 </p>
 
-                                <p class="p-article__blockquote-link">出典元：<a>https://xxxx.com</a></p>
+                                <cite class="p-article__blockquote-link">出典元：<a>https://xxxx.com</a></cite>
                             </div>
                         </article>
-                        <article class="p-single__thumbnail">
-                            <img class="p-single__thumbnail--top" src="../img/setmenu.jpg" alt="">
-                            <div class="p-single__thumbnail--flex">
+                        <article class="p-pictures">
+                            <img class="p-pictures--top" src="../img/setmenu.jpg" alt="">
+                            <div class="p-pictures--flex">
                                 <img src="../img/setmenu.jpg" alt="">
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </li>
-                                </p>
+                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                             </div>
-                            <div class="p-single__thumbnail--flex">
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </li>
-                                </p>
+                            <div class="p-pictures--flex">
+                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 <img src="../img/setmenu.jpg" alt="">
                             </div>
-                            <img class="p-single__thumbnail--bottom" src="../img/setmenu.jpg" alt="">
+                            <img class="p-pictures--bottom" src="../img/setmenu.jpg" alt="">
 
-                            <div class="p-single__thumbnail__list">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
-                                <img class="p-single__thumbnail__item" src="../img/setmenu.jpg" alt="">
+                            <div class="p-pictures__list">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
+                                <img class="p-pictures__item" src="../img/setmenu.jpg" alt="">
                             </div>
 
                         </article>
-                        <article>
-                            <div class="p-single__list">
-                                <ol>
+                        </article>
+                        <article class="c-list">
+                            <div class="c-list__wrapper">
+                                <ol class="c-list__item">
                                     <li>1.リストリストリスト</li>
                                     <li>2.リストリストリスト</li>
                                 </ol>
-                                <ol class="p-single__list-center">
-                                    <li>1.リスト2リスト2リスト2</li>
-                                    <li>2.リスト2リスト2リスト2</li>
+                                <ol class="c-list__item">
+                                    <li class="c-list__middle">1.リスト2リスト2リスト2</li>
+                                    <li class="c-list__middle" >2.リスト2リスト2リスト2</li>
+                                    
                                 </ol>
-                                <ol class="p-single__list-bottom">
+                                <ol class="c-list__item">
                                     <li>1.リストリストリスト</li>
                                     <li>2.リストリストリスト</li>
                                 </ol>
-
-                                <ul>
+                            </div>
+                            <div class="c-list__wrapper">
+                                <ul class="c-list__item">
                                     <li>リストリストリスト</li>
                                     <li>リストリストリスト</li>
                                 </ul>
-                                <ul class="p-single__list-center">
-                                    <li>リスト2リスト2リスト</li>
-                                    <li>リスト2リスト2リスト</li>
+                                <ul class="c-list__item">
+                                    <li class="c-list__middle">リスト2リスト2リスト</li>
+                                    <li class="c-list__middle">リスト2リスト2リスト</li>
                                 </ul>
-                                <ul class="p-single__list-bottom">
+                                <ul class="c-list__item">
                                     <li>リストリストリスト</li>
                                     <li>リストリストリスト</li>
                                 </ul>
                             </div>
-                        </article>
-                        <article>
-                            <pre class="p-single__code">
-                                <code>
+                           </article>
+                        <article class="c-samplecode">
+<pre><code>
 &lt;html&gt;
     &lt;head&gt;
     &lt;/head&gt;
     &lt;body&gt;
     &lt;/body&gt;                
-&lt;/html&gt;
-                                </code>
-                            </pre>
+&lt;/html&gt;                            
+</code>
+</pre>
                         </article>
                         <article>
 
                             <div class="c-table">
                                 <table>
                                     <tr>
-                                        <th>テーブル</th>
+                                        <td width="35%">テーブル</td>
+                                        <td width="65%">テーブル</td>
+                                    </tr>
+                                    <tr>
+                                        <td>テーブル</td>
                                         <td>テーブル</td>
                                     </tr>
                                     <tr>
-                                        <th>テーブル</th>
+                                        <td>テーブル</td>
                                         <td>テーブル</td>
                                     </tr>
                                     <tr>
-                                        <th>テーブル</th>
                                         <td>テーブル</td>
-                                    </tr>
-                                    <tr>
-                                        <th>テーブル</th>
                                         <td>テーブル</td>
                                     </tr>
                                 </table>
@@ -172,7 +170,7 @@
 
 
                         </article>
-                        <button class="p-single__btn c-btn">ボタン</button>
+                        <button class="c-btn--primary c-btn">ボタン</button>
 
                         <p class="p-single__btn-text">boldboldboldboldboldboldbold</p>
 
@@ -184,7 +182,7 @@
         </div>
         <aside class="l-sidebar">
             <button type="button" class="c-toggle">
-                <span class="c-toggle--btn is-open">Menu</span>
+                <span class="c-toggle--btn">Menu</span>
                 <span class="c-toggle--line is-open"></span>
             </button>
 
