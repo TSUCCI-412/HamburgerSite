@@ -2,23 +2,22 @@
     margin-top: 30px;
     margin-bottom:30px;
     
-    & table {
+    & > table {
         width: 100%;
-        border: 1px solid;
+        height: 305px;
+        border-collapse: collapse;  /* tr、tdなどの隣接するセルの隙間をなくす */
         }
-    & tr {
+        & > tr, td {
+            border:1px solid; /* 枠線をつける */
+            vertical-align: middle;
+            padding-left: 30px;
+            white-space: nowrap; //折り返さない
+        }
+    & > table > tr {
         height: 77px;
-        border: 1px solid;
-    }
-    & th {
-        border: 1px solid;
-        width: 35%;
-        min-width: 135px;
-        padding: 30px;
-    }
-    & td {
-        width: 65%;
-        min-width: 200px;
-        padding: 30px;
-    }
+        }
 }
+
+
+//CSSでは、thとtdに対して枠線borderを設定し、
+//tableタグに対してborder-collapse:collapseを設定

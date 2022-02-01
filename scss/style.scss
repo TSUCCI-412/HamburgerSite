@@ -22,12 +22,13 @@
 
 /*Component-----------------------*/
 @import "./object/component/toggle";
-@import "./object/component/grid";
+@import "./object/component/container";
 @import "./object/component/layer";
-@import "./object/component/card";
 @import "./object/component/pagenation";
 @import "./object/component/table";
 @import "./object/component/btn";
+@import "./object/component/samplecode";
+@import "./object/component/list";
 
 
 
@@ -43,8 +44,9 @@
 @import "./object/project/map";
 @import "./object/project/footer";
 @import "./object/project/article";
-@import "./object/project/single";
+@import "./object/project/pictures";
 @import "./object/project/search-form";
+@import "./object/project/card";
 
 
 /*Utility------------------------*/

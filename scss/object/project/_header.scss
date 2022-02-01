@@ -1,15 +1,21 @@
 .p-header {
+    position: relative;
     background-color: #FFF7EF;
-    @include mq(pc){
-        display: flex;
-        justify-content: space-between;
-        
+    &__btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+       
     }
-
+    &__wrap {
+        @include mq(pc){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     &__title {
         font-family: "Roboto";
         font-size: 2.5rem;      
-        color: #707070;
         text-align: center;
         position: relative;
         top: 40px;
@@ -17,7 +23,7 @@
             top: 60px;
             font-size: 4.0rem;
         }
-         & > a {
+        & > a {
             display: block;
             padding: 0 60px;
         }
@@ -25,4 +31,3 @@
     }
     
 }
-

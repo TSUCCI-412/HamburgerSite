@@ -1,0 +1,77 @@
+.p-card {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    @include mq(tb) {
+        flex-direction: row;
+    }
+    @include mq(pc) {
+        margin-bottom: 30px;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        background-color: #3C2B1C;
+        order: 2;
+        color: #fff;
+        padding: 30px 17px 43px;
+        @include mq(tb) {
+            width: 50%;
+            padding: 30px 35px 40px;
+        }
+        @include mq(pc) {
+            padding: 53px 63px 60px;
+        }
+        
+    }
+    &__head {
+        white-space: nowrap;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+        @include mq(pc) {
+            font-size: 2.25rem;
+            margin-bottom: 47px;
+        }
+    }
+    &__subhead {
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include mq(pc) {
+            font-size: 1.5rem;
+            margin-bottom: 17px;
+        }
+    }
+    &__text {
+        margin-bottom: 40px;
+        @include mq(pc) {
+            margin-bottom: 60px;
+        }
+    }    
+    &__img {
+        width: 100%;
+        display: block; /* 余計な余白が出ないようにする */
+        order: 1;
+        @include mq(tb) {
+            width: 50%;
+        }
+    }
+    &__btn {
+        margin: auto;  //高さを下に揃えるため
+        border-radius: 30px;
+        padding: 10px 40px;
+        background-color:  #fff;
+        min-width: 163px;
+        @include mq(pc) {
+            width: 60%;
+            padding-top: 27px;
+            padding-bottom: 27px;
+        }
+       
+    }
+}
+
+
+
+

@@ -1,5 +1,13 @@
 .l-sidebar {
     width: 100%;
+    @include mq(pc) {
+        grid-row: 1/2;
+		grid-column: 2/3;
+		background-color: #F2EDE9;
+		z-index: 2;
+		position: relative;
+	
+    }
    
 }
 

@@ -78,11 +78,14 @@ h6 {
 /* Lists (enumeration) */
 /* ============================================ */
 
-ul,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+ol {
+  margin: 0;
+  padding: 0;
 }
 
 /* Lists (definition) */
