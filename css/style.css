@@ -399,7 +399,7 @@ th {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 100%;
   width: 100%;
   height: 100%;
   color: #707070;
@@ -433,11 +433,6 @@ ul, li {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-p {
-  font-size: 16px;
-  font-size: 1rem;
 }
 
 .l-header {
@@ -519,7 +514,6 @@ p {
 .c-toggle--btn {
   display: none;
   color: #707070;
-  font-size: 34px;
   font-size: 2.125rem;
   cursor: pointer;
 }
@@ -609,7 +603,7 @@ p {
   position: relative;
   display: inline-block;
   padding-left: 20px;
-  margin: 0 15px;
+  margin: 5px 15px;
 }
 
 .c-pagenation__arrow-pre::before {
@@ -642,7 +636,7 @@ p {
   position: relative;
   display: inline-block;
   padding-left: 20px;
-  margin: 0 15px;
+  margin: 5px 15px;
 }
 
 .c-pagenation__arrow-next::before {
@@ -703,37 +697,48 @@ p {
 }
 
 .c-pagenation__top {
-  font-size: 16px;
+  font-family: 'Roboto';
   font-size: 1rem;
+  font-weight: bold;
   display: none;
 }
 
 @media screen and (min-width: 600px) {
   .c-pagenation__top {
     display: block;
-    line-height: 2.0;
+    line-height: 2.3;
   }
 }
 
 .c-pagenation__number {
-  font-size: 16px;
   font-size: 1rem;
   display: none;
 }
 
 @media screen and (min-width: 600px) {
   .c-pagenation__number {
-    display: block;
-    border: solid 2px #707070;
-    padding: 5px 8px;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #707070;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    font-family: 'Roboto';
+    font-weight: bold;
   }
   .c-pagenation__number:nth-child(11) {
     margin-right: 0;
   }
+  .c-pagenation__number > a {
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 .c-pagenation__text {
+  font-size: 1rem;
   display: block;
   padding: 5px;
 }
@@ -784,14 +789,12 @@ p {
 
 .c-btn--sp {
   font-family: 'Roboto';
-  font-size: 20px;
   font-size: 1.25rem;
   cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
   .c-btn--sp {
-    font-size: 34px;
     font-size: 2.125rem;
   }
 }
@@ -851,7 +854,7 @@ p {
 @media screen and (min-width: 1026px) and (max-width: 1500px) {
   .p-branchmenu {
     gap: 80px;
-    margin: 80px;
+    margin: 50px;
   }
 }
 
@@ -864,7 +867,6 @@ p {
 
 .p-branchmenu__head {
   white-space: nowrap;
-  font-size: 41px;
   font-size: 2.5625rem;
   color: #fff;
   font-family: "Roboto";
@@ -872,14 +874,12 @@ p {
 
 @media screen and (min-width: 600px) {
   .p-branchmenu__head {
-    font-size: 44px;
     font-size: 2.75rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .p-branchmenu__head {
-    font-size: 60px;
     font-size: 3.75rem;
   }
 }
@@ -1042,27 +1042,23 @@ p {
 
 .p-header__title {
   font-family: "Roboto";
-  font-size: 40px;
   font-size: 2.5rem;
   text-align: center;
 }
 
 @media screen and (min-width: 1025px) {
   .p-header__title {
-    font-size: 64px;
     font-size: 4rem;
   }
 }
 
 .p-header__title > a {
-  font-size: 40px;
   font-size: 2.5rem;
   display: block;
 }
 
 @media screen and (min-width: 1025px) {
   .p-header__title > a {
-    font-size: 64px;
     font-size: 4rem;
   }
 }
@@ -1087,7 +1083,6 @@ p {
 .p-mainvisual__title {
   color: #fff;
   font-family: "mplus+1m";
-  font-size: 36px;
   font-size: 2.25rem;
   font-weight: bold;
   margin-left: 35px;
@@ -1095,9 +1090,12 @@ p {
 
 @media screen and (min-width: 1025px) {
   .p-mainvisual__title {
-    font-size: 40px;
     font-size: 2.5rem;
   }
+}
+
+.p-mainvisual > p {
+  font-size: 1rem;
 }
 
 .p-mainvisual--archive {
@@ -1118,7 +1116,7 @@ p {
 .p-mainvisual--archive::after {
   content: "";
   /* ↓暗いオーバーレイを半透明で配置 */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   /* ↓全体を覆うように配置 */
   position: absolute;
   width: 100%;
@@ -1129,6 +1127,36 @@ p {
 @media screen and (min-width: 1025px) {
   .p-mainvisual--archive::after {
     z-index: 1;
+  }
+}
+
+.p-mainvisual__title--secondry {
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 2.25rem;
+  margin-left: 37px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-mainvisual__title--secondry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3.75rem;
+  }
+}
+
+.p-mainvisual__title--secondry > p {
+  font-family: "mplus+1m";
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-mainvisual__title--secondry > p {
+    margin-left: 20px;
   }
 }
 
@@ -1196,7 +1224,6 @@ p {
   font-weight: bold;
   color: #707070;
   padding: 35px 40px;
-  font-size: 24px;
   font-size: 1.5rem;
 }
 
@@ -1204,7 +1231,6 @@ p {
   display: block;
   color: #707070;
   padding: 11px 66px;
-  font-size: 20px;
   font-size: 1.25rem;
 }
 
@@ -1266,7 +1292,6 @@ p {
 }
 
 .p-map__head {
-  font-size: 30px;
   font-size: 1.875rem;
   font-weight: bold;
   color: #fff;
@@ -1274,7 +1299,6 @@ p {
 
 @media screen and (min-width: 1025px) {
   .p-map__head {
-    font-size: 36px;
     font-size: 2.25rem;
     width: 70%;
   }
@@ -1296,7 +1320,6 @@ p {
 }
 
 .p-map__txt {
-  font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 2.3;
@@ -1306,7 +1329,6 @@ p {
 @media screen and (min-width: 1025px) {
   .p-map__txt {
     width: 70%;
-    font-size: 16px;
     font-size: 1rem;
     line-height: 2.0;
   }
@@ -1322,7 +1344,6 @@ p {
 .p-footer__menu {
   padding-top: 40px;
   padding-bottom: 35px;
-  font-size: 20px;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
@@ -1337,7 +1358,6 @@ p {
 
 .p-footer__copyright {
   display: block;
-  font-size: 14px;
   font-size: 0.875rem;
   padding-bottom: 30x;
 }
@@ -1347,13 +1367,19 @@ p {
 }
 
 .p-article__title {
-  font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold;
   color: #3C2A10;
 }
 
+@media screen and (min-width: 600px) {
+  .p-article__title {
+    font-size: 2.25rem;
+  }
+}
+
 .p-article__text {
+  font-size: 1rem;
   margin: 30px 0 34px;
 }
 
@@ -1412,7 +1438,6 @@ p {
 }
 
 .p-article > h3 {
-  font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
   color: #3C2A10;
@@ -1426,7 +1451,6 @@ p {
 }
 
 .p-article > h4, h5, h6 {
-  font-size: 20px;
   font-size: 1.25rem;
   font-weight: bold;
   color: #3C2A10;
@@ -1588,7 +1612,6 @@ p {
 }
 
 .p-search-form__submit {
-  font-size: 16px;
   font-size: 1rem;
   height: 45px;
   width: 78px;
@@ -1601,7 +1624,6 @@ p {
 }
 
 .p-search-form__keyword.fas {
-  font-size: 24px;
   font-size: 1.5rem;
   color: #808080;
   padding-left: 12px;
@@ -1650,7 +1672,6 @@ p {
 
 .p-card__head {
   white-space: nowrap;
-  font-size: 20px;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 24px;
@@ -1658,26 +1679,26 @@ p {
 
 @media screen and (min-width: 1025px) {
   .p-card__head {
-    font-size: 36px;
     font-size: 2.25rem;
     margin-bottom: 47px;
   }
 }
 
 .p-card__subhead {
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1025px) {
   .p-card__subhead {
-    font-size: 24px;
     font-size: 1.5rem;
     margin-bottom: 17px;
   }
 }
 
 .p-card__text {
+  font-size: 1rem;
   margin-bottom: 40px;
 }
 
@@ -1706,6 +1727,8 @@ p {
   padding: 10px 40px;
   background-color: #fff;
   min-width: 163px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1025px) {

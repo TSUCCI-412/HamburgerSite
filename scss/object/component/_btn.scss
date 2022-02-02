@@ -7,10 +7,10 @@
 }
 .c-btn--sp {
     font-family: 'Roboto';
-    @include rem(20);
+    font-size: rem(20);
     cursor: pointer; 
    @include mq(tb){
-    @include rem(34);
+    font-size: rem(34);
       }
     
 }

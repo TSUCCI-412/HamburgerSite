@@ -2,11 +2,15 @@
 .p-article {
     margin-top: 30px;
     &__title {
-        @include rem(28);
+        font-size: rem(28);
         font-weight: bold;
         color: #3C2A10;
+        @include mq(tb) {
+            font-size: rem(36);
+        }
     }
     &__text {
+        font-size: rem(16);
         margin: 30px 0 34px;
         @include mq(tb) {
             margin: 60px 0;
@@ -50,7 +54,7 @@
 }
 
 .p-article > h3 {
-    @include rem(24);
+    font-size: rem(24);
     font-weight: bold;
     color: #3C2A10;
     margin-bottom: 30px;
@@ -59,7 +63,7 @@
     }
 }
 .p-article > h4,h5,h6 {
-    @include rem(20);
+    font-size: rem(20);
     font-weight: bold;
     color: #3C2A10;
 }

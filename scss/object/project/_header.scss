@@ -31,16 +31,16 @@
     }
     &__title {
         font-family: "Roboto";
-        @include rem(40);    
+        font-size: rem(40);    
         text-align: center;
         @include mq(pc){
-            @include rem(64);
+            font-size: rem(64);
         }
         & > a {
-            @include rem(40);
+            font-size:  rem(40);
             display: block;
             @include mq(pc) {
-                @include rem(64);
+                font-size: rem(64);
             }
     
         }

@@ -7,7 +7,7 @@
    &--btn {
       display: none;
       color: #707070;
-      @include rem(34);
+      font-size: rem(34);
       cursor: pointer; 
       //z-index: 1100;
       @include mq(pc){

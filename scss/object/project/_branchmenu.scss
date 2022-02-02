@@ -4,9 +4,9 @@
             gap: 40px;    //2つの写真の隙間
             grid-template-columns: 1fr 1fr;
         }
-        @include mq-range(md) {
+        @include mq-range(md) { //中間の大きさ
             gap: 80px;
-            margin: 80px;
+            margin: 50px;
         }
         @include mq(lg) {
             gap: 80px;    //2つの写真の隙間
@@ -15,15 +15,15 @@
         }
     &__head {
         white-space: nowrap;
-        @include rem(41);
+        font-size:  rem(41);
         color: #fff;
         font-family: "Roboto";
         @include mq(tb) {
-            @include rem(44);
+            font-size: rem(44);
             
         }
         @include mq(pc) {
-            @include rem(60);
+            font-size: rem(60);
             
         }
         & > a {

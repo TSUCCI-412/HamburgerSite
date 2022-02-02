@@ -22,7 +22,7 @@
 }
 
 .p-search-form__submit {
-    @include rem(16);
+    font-size: rem(16);
     height: 45px;
     width: 78px; 
     @include mq(tb){
@@ -33,7 +33,7 @@
 }
 
 .p-search-form__keyword.fas {
-    @include rem(24);
+    font-size: rem(24);
     color: #808080;
     padding-left: 12px;
 
