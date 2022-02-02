@@ -4,10 +4,12 @@
             gap: 40px;    //2つの写真の隙間
             grid-template-columns: 1fr 1fr;
         }
-        @include mq(pc) {
-            display: grid;
+        @include mq-range(md) {
+            gap: 80px;
+            margin: 80px;
+        }
+        @include mq(lg) {
             gap: 80px;    //2つの写真の隙間
-            grid-template-columns: 1fr 1fr;
             margin: 120px 110px 130px;
 
         }

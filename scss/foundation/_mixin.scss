@@ -12,6 +12,12 @@
   }
 }
 
+@mixin mq-range($breakpoint: md) {
+  @media #{map-get($breakpoint-range, $breakpoint)} {
+    @content;
+  }
+}
+
 
 //@include mq() { // 引数を省略（初期値はtbの600px）
 

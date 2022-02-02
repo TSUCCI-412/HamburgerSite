@@ -848,11 +848,16 @@ p {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1026px) and (max-width: 1500px) {
   .p-branchmenu {
-    display: grid;
     gap: 80px;
-    grid-template-columns: 1fr 1fr;
+    margin: 80px;
+  }
+}
+
+@media screen and (min-width: 1501px) {
+  .p-branchmenu {
+    gap: 80px;
     margin: 120px 110px 130px;
   }
 }

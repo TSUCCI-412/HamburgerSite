@@ -4,5 +4,14 @@
 $breakpoints: (
   'tb': 'screen and (min-width: 600px)',
   'pc': 'screen and (min-width: 1025px)',
+  'lg': 'screen and (min-width: 1501px)',
  
+ 
+ 
+) !default;
+
+
+$breakpoint-range: (
+'md': 'screen and (min-width: 1026px) and (max-width: 1500px)',
+
 ) !default;
