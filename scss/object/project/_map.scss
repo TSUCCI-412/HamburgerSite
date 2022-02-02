@@ -38,11 +38,11 @@
         }
     }
     &__head {
-        font-size: 1.875rem;
+        @include rem(30);
         font-weight: bold;
         color: #fff;
         @include mq(pc) {
-            font-size: 2.25rem;
+            @include rem(36);
             width: 70%;
         }
         &::after {
@@ -59,13 +59,13 @@
         }
     }  
     &__txt {
-        font-size: 0.875rem;
+        @include rem(14);
         font-weight: bold;
         line-height: 2.3;
         color: #fff;
         @include mq(pc){
             width: 70%; 
-            font-size: 16px;
+            @include rem(16);
             line-height: 2.0;  
         }
     }

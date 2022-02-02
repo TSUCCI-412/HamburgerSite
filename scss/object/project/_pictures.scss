@@ -82,16 +82,4 @@
 
 
 
-.p-single__btn-text {
-    line-height: 22px;
-    font-weight: bold;
-    margin-bottom: 177px;
-    color: #3C2A10;
-    @include mq(tb) {
-        margin-bottom: 228px;
-    }
-    @include mq(pc) {
-        margin-bottom: 353px;
-    }
-}
 

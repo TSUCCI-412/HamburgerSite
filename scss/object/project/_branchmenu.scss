@@ -12,15 +12,16 @@
 
         }
     &__head {
-        font-size: 41px;
+        white-space: nowrap;
+        @include rem(41);
         color: #fff;
         font-family: "Roboto";
         @include mq(tb) {
-            font-size: 44px;
+            @include rem(44);
             
         }
         @include mq(pc) {
-            font-size: 60px;
+            @include rem(60);
             
         }
         & > a {

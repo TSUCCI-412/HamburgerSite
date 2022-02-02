@@ -99,6 +99,7 @@
         }
     }
     &__top {
+        @include rem(16);
         display: none;
         @include mq(tb) {
         display: block;
@@ -106,6 +107,7 @@
         }
     }
     &__number {
+        @include rem(16);
         display: none;
         @include mq(tb) {
             display: block;

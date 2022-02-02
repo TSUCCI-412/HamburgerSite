@@ -3,31 +3,46 @@
     background-color: #FFF7EF;
     &__btn {
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 14px;
+        right: 16px;
+        @include mq(tb) {
+            top: 18px;
+            right: 26px;
+        }
+        @include mq(pc) {
+            display: none;
+        }
        
     }
     &__wrap {
+        height: 100%;   //親要素と高さを揃える
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
         @include mq(pc){
-            display: flex;
-            justify-content: space-between;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            padding-left: 60px;
+          
         }
     }
     &__title {
         font-family: "Roboto";
-        font-size: 2.5rem;      
+        @include rem(40);    
         text-align: center;
-        position: relative;
-        top: 40px;
         @include mq(pc){
-            top: 60px;
-            font-size: 4.0rem;
+            @include rem(64);
         }
         & > a {
+            @include rem(40);
             display: block;
-            padding: 0 60px;
+            @include mq(pc) {
+                @include rem(64);
+            }
+    
         }
-    
     }
-    
 }

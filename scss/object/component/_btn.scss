@@ -7,18 +7,12 @@
 }
 .c-btn--sp {
     font-family: 'Roboto';
-    font-size: 1.25rem;
+    @include rem(20);
     cursor: pointer; 
    @include mq(tb){
-        font-size: 2.1rem;
+    @include rem(34);
       }
-    @include mq(pc) {
-        display: none;
-    }
-}
-
-.c-btn--sp.active {
-    visibility: hidden;
+    
 }
 
 .c-btn--search {

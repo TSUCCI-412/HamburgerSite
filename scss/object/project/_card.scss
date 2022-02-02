@@ -27,11 +27,11 @@
     }
     &__head {
         white-space: nowrap;
-        font-size: 1.25rem;
+        @include rem(20);
         font-weight: bold;
         margin-bottom: 24px;
         @include mq(pc) {
-            font-size: 2.25rem;
+            @include rem(36);
             margin-bottom: 47px;
         }
     }
@@ -39,7 +39,7 @@
         font-weight: bold;
         margin-bottom: 10px;
         @include mq(pc) {
-            font-size: 1.5rem;
+            @include rem(24);
             margin-bottom: 17px;
         }
     }

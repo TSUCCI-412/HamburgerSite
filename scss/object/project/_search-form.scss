@@ -1,10 +1,8 @@
 .p-search-form {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 80px;
     @include mq(pc) {
-        margin-right: 30px;
+        padding-right: 30px;
     }
     
 }
@@ -18,24 +16,25 @@
     width: 230px;
     margin-right: 12px;
     @include mq(tb){
-        width: 300px;
+        max-width: 396px;
     }  
     
 }
 
 .p-search-form__submit {
+    @include rem(16);
     height: 45px;
-    width: 70px; 
+    width: 78px; 
     @include mq(tb){
-        width: 100px;
+        max-width: 136px;
     }  
   
 
 }
 
-.fas {
+.p-search-form__keyword.fas {
+    @include rem(24);
     color: #808080;
-    padding-left: 10px;
+    padding-left: 12px;
+
 }
-
-
