@@ -4,11 +4,8 @@
             gap: 40px;    //2つの写真の隙間
             grid-template-columns: 1fr 1fr;
         }
-        @include mq-range(md) { //中間の大きさ
-            gap: 80px;
-            margin: 50px;
-        }
-        @include mq(lg) {
+        @include mq(pc) {
+            display: grid;
             gap: 80px;    //2つの写真の隙間
             margin: 120px 110px 130px;
 
@@ -103,9 +100,11 @@
     background-size: cover;
     margin-bottom: 20px;
     position: relative;
-
     @include mq(tb) {
         margin-bottom: 0;
+    }
+    @include mq(pc) {
+        min-width: 350px;
     }
 
 }
@@ -115,5 +114,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    @include mq(pc) {
+        min-width: 350px;
+    }
     
 } 

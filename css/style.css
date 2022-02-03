@@ -803,6 +803,7 @@ ul, li {
   border-radius: 10px;
   border: 1px solid #707070;
   background-color: #F2EDE9;
+  min-width: 78px;
 }
 
 .c-btn--primary {
@@ -851,15 +852,9 @@ ul, li {
   }
 }
 
-@media screen and (min-width: 1026px) and (max-width: 1500px) {
+@media screen and (min-width: 1025px) {
   .p-branchmenu {
-    gap: 80px;
-    margin: 50px;
-  }
-}
-
-@media screen and (min-width: 1501px) {
-  .p-branchmenu {
+    display: grid;
     gap: 80px;
     margin: 120px 110px 130px;
   }
@@ -990,12 +985,24 @@ ul, li {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .p-branchmenu--takeout {
+    min-width: 350px;
+  }
+}
+
 .p-branchmenu--eatin {
   width: 100%;
   background-image: url(../img/eatin.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-branchmenu--eatin {
+    min-width: 350px;
+  }
 }
 
 .p-header {
@@ -1037,6 +1044,7 @@ ul, li {
     align-items: center;
     padding: 0;
     padding-left: 60px;
+    margin-right: 10px;
   }
 }
 
@@ -1601,7 +1609,7 @@ ul, li {
   border-radius: 10px;
   background-color: #fff;
   height: 45px;
-  width: 230px;
+  max-width: 230px;
   margin-right: 12px;
 }
 

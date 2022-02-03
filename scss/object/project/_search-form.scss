@@ -13,7 +13,7 @@
     border-radius: 10px;
     background-color: #fff;
     height: 45px;
-    width: 230px;
+    max-width: 230px;
     margin-right: 12px;
     @include mq(tb){
         max-width: 396px;
