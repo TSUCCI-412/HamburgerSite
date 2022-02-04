@@ -1,4 +1,7 @@
-.c-toggle {
+.c-toggle { 
+   
+   width: 50px; 
+   height: 50px;
    @include mq(pc) {
       position: relative;
       margin-bottom: 85px;
@@ -6,32 +9,31 @@
     
    &--btn {
       display: none;
-      color: #707070;
-      font-size: rem(34);
-      cursor: pointer; 
-      //z-index: 1100;
-      @include mq(pc){
+      @include mq(pc) {
          display: block;
          position: absolute;
          top: 82px;
          left: 46px;
+         color: #707070;
+         font-size: rem(34);
+         z-index: 1000;
       }
-   }
+   }   
 }
 
 
-.c-toggle--line.active {
+.c-toggle--line {
    display: block; //spanにクリック時の範囲を持たせるため
    position: relative;
    position: absolute;
    top: 25px;
    right: 25px;
-   transition-duration: .8s;
    z-index: 1100;
-   width: 25px;
+   width: 40px;
    height: 4px;
    cursor: pointer;
    &::after,&::before {
+      visibility: hidden;
       content: "";
       display: block;
       position: absolute;
@@ -39,16 +41,21 @@
       height: 4px;
       top: 15px;
       background-color: #707070;
+      transition-duration: .4s;
    }
    &::before {
-      top: -10px;
-      transform: translateY(10px) rotate(45deg);
+      top: 0px;
       }
-     
-
    &::after {
-      top: -5px;
-      transform: translateY(5px) rotate(135deg);
+      top: 15px;
    }
 }
 
+.c-toggle.active .c-toggle--line::before {
+   visibility: visible;
+   transform: translateY(10px) rotate(45deg);
+}
+.c-toggle.active .c-toggle--line::after {
+   visibility: visible;
+   transform: translateY(-5px) rotate(-45deg);
+}

@@ -8,7 +8,6 @@ $(function() {
   
         $(".c-btn--sp").on("click",function() {
           $(".is-open").toggleClass("active");  
-          //$('.is-menu').toggleClass('on-menu');
           $('.is-menu').animate({'marginRight':'300px'},400);
           $('.is-fade').toggleClass("cover");
         
@@ -16,16 +15,15 @@ $(function() {
   
         $(".c-toggle--line").on("click",function() {
           $(".is-open").removeClass("active");  
-          //$('.is-menu').removeClass('on-menu');
-          $('.is-menu').animate({'marginRight':'0px'},400);
+          $('.is-menu').animate({'marginRight':'-300px'},400);
           $('.is-fade').removeClass("cover");
         
         })
   
-      } else{ (window.matchMedia( "(min-width: 1024px)" ).matches) 
+      } else{ (window.matchMedia( "(min-width: 1025px)" ).matches)
           $(".is-open").removeClass("active"); 
-          $('.is-menu').removeClass('on-menu');
-          $('.is-fade').removeClass("cover"); 
+          $('.is-fade').removeClass("cover");
+      
       }    
     });
   });

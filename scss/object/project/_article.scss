@@ -59,6 +59,7 @@
     color: #3C2A10;
     margin-bottom: 30px;
     @include mq(tb) {
+        font-size: rem(28);
         margin-bottom: 60px;
     }
 }

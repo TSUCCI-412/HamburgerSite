@@ -504,6 +504,11 @@ ul, li {
 }
 
 /*Component-----------------------*/
+.c-toggle {
+  width: 50px;
+  height: 50px;
+}
+
 @media screen and (min-width: 1025px) {
   .c-toggle {
     position: relative;
@@ -513,9 +518,6 @@ ul, li {
 
 .c-toggle--btn {
   display: none;
-  color: #707070;
-  font-size: 2.125rem;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1025px) {
@@ -524,23 +526,26 @@ ul, li {
     position: absolute;
     top: 82px;
     left: 46px;
+    color: #707070;
+    font-size: 2.125rem;
+    z-index: 1000;
   }
 }
 
-.c-toggle--line.active {
+.c-toggle--line {
   display: block;
   position: relative;
   position: absolute;
   top: 25px;
   right: 25px;
-  transition-duration: .8s;
   z-index: 1100;
-  width: 25px;
+  width: 40px;
   height: 4px;
   cursor: pointer;
 }
 
-.c-toggle--line.active::after, .c-toggle--line.active::before {
+.c-toggle--line::after, .c-toggle--line::before {
+  visibility: hidden;
   content: "";
   display: block;
   position: absolute;
@@ -548,16 +553,25 @@ ul, li {
   height: 4px;
   top: 15px;
   background-color: #707070;
+  transition-duration: .4s;
 }
 
-.c-toggle--line.active::before {
-  top: -10px;
+.c-toggle--line::before {
+  top: 0px;
+}
+
+.c-toggle--line::after {
+  top: 15px;
+}
+
+.c-toggle.active .c-toggle--line::before {
+  visibility: visible;
   transform: translateY(10px) rotate(45deg);
 }
 
-.c-toggle--line.active::after {
-  top: -5px;
-  transform: translateY(5px) rotate(135deg);
+.c-toggle.active .c-toggle--line::after {
+  visibility: visible;
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 @media screen and (min-width: 1025px) {
@@ -807,6 +821,7 @@ ul, li {
 }
 
 .c-btn--primary {
+  font-weight: bold;
   height: 81px;
   width: 100%;
   max-width: 429px;
@@ -1093,12 +1108,13 @@ ul, li {
   font-family: "mplus+1m";
   font-size: 2.25rem;
   font-weight: bold;
-  margin-left: 35px;
+  margin-left: 25px;
 }
 
 @media screen and (min-width: 1025px) {
   .p-mainvisual__title {
     font-size: 2.5rem;
+    margin-left: 86px;
   }
 }
 
@@ -1138,7 +1154,7 @@ ul, li {
   }
 }
 
-.p-mainvisual__title--secondry {
+.p-mainvisual__title--archive {
   color: #fff;
   font-family: "Roboto";
   font-weight: bold;
@@ -1147,15 +1163,16 @@ ul, li {
 }
 
 @media screen and (min-width: 600px) {
-  .p-mainvisual__title--secondry {
+  .p-mainvisual__title--archive {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 3.75rem;
+    margin-left: 86px;
   }
 }
 
-.p-mainvisual__title--secondry > p {
+.p-mainvisual__title--archive > p {
   font-family: "mplus+1m";
   font-size: 1rem;
   font-weight: bold;
@@ -1163,7 +1180,7 @@ ul, li {
 }
 
 @media screen and (min-width: 600px) {
-  .p-mainvisual__title--secondry > p {
+  .p-mainvisual__title--archive > p {
     margin-left: 20px;
   }
 }
@@ -1196,6 +1213,20 @@ ul, li {
 @media screen and (min-width: 600px) {
   .p-mainvisual--page {
     height: 500px;
+  }
+}
+
+.p-mainvisual__title--single {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 26px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-mainvisual__title--single {
+    font-size: 3.75rem;
+    margin-left: 86px;
   }
 }
 
@@ -1240,10 +1271,6 @@ ul, li {
   color: #707070;
   padding: 11px 66px;
   font-size: 1.25rem;
-}
-
-.p-gnav.on-menu {
-  right: 0;
 }
 
 .p-map {
@@ -1454,6 +1481,7 @@ ul, li {
 
 @media screen and (min-width: 600px) {
   .p-article > h3 {
+    font-size: 1.75rem;
     margin-bottom: 60px;
   }
 }
@@ -1500,6 +1528,7 @@ ul, li {
   width: 100%;
   object-fit: cover;
   object-position: bottom;
+  height: 124px;
 }
 
 @media screen and (min-width: 600px) {

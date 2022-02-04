@@ -16,9 +16,10 @@
     font-family:  "mplus+1m";
     font-size: rem(36);
     font-weight: bold;
-    margin-left: 35px;
+    margin-left: 25px;
     @include mq(pc) {
         font-size: rem(40);
+        margin-left: 86px;
     }
     }
     & > p {
@@ -52,7 +53,7 @@
         }
         }       
 }
-.p-mainvisual__title--secondry {
+.p-mainvisual__title--archive {
     color: #fff;
     font-family:  "Roboto";
     font-weight: bold;
@@ -63,6 +64,7 @@
         flex-direction: row;
         align-items: center; 
         font-size: rem(60);
+        margin-left: 86px;
     }
     & > p {
         font-family:  "mplus+1m";
@@ -73,6 +75,7 @@
             margin-left: 20px;
         }
     }
+    
 }
 
 .p-mainvisual--single {
@@ -100,4 +103,14 @@
         height: 500px;
     }
 
+}
+.p-mainvisual__title--single {
+    font-size: rem(36);
+    font-weight: bold;
+    color: #fff;
+    margin-left: 26px;
+    @include mq(tb) {
+        font-size: rem(60);
+        margin-left: 86px;
+    }
 }
