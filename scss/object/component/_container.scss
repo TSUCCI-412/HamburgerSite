@@ -1,4 +1,5 @@
 .c-container {
+	width: 100%;
 		@include mq(pc) {
     	display: grid;
 		grid-template-columns: auto 367px;

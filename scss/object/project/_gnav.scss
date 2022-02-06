@@ -1,24 +1,9 @@
 .p-gnav {
-    position: fixed;
-    top: 0px;
-    right: -300px;
-    width: 300px;
-    background-color: #F2EDE9;
-    z-index: 1000;
-    height: 100vh;   //メニューをスクロール
-    overflow: auto;  //メニューをスクロール
-    @include mq(pc){
-        position: static;
-        overflow: visible;
-        width: 100%;
-        
+    margin-top: 160px;
+    @include mq(pc) {
+
     }
-    &__list {
-        margin-top: 200px;
-        @include mq(pc) {
-            margin-top: 100px;
-        }
-    }
+    
     &__item > a {
         display: block;
         font-weight: bold; ;
@@ -34,3 +19,4 @@
         
     }
 }
+

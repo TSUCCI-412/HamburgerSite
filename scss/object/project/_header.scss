@@ -10,7 +10,7 @@
             right: 26px;
         }
         @include mq(pc) {
-            display: none;
+            visibility: hidden;  //display:noneどっち？？
         }
        
     }

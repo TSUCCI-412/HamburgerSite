@@ -1,6 +1,7 @@
 .c-layer {
 	width: 100%;
 	
+	
 }
 
 .c-layer.cover {
@@ -20,6 +21,9 @@
 	bottom: 0;
 	content: ' ';
     visibility: hidden;
+	@include mq(pc) {
+		position: static;
+	}
 }
 
 .c-layer.cover::after {
