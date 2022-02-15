@@ -11,8 +11,8 @@
         width: 12px;
         height: 12px;
         border: 0px;
-        border-top: solid 2px #707070;
-        border-right: solid 2px #707070;
+        border-top: solid 2px var(--third-fontcolor);
+        border-right: solid 2px var(--third-fontcolor);
             -ms-transform: rotate(225deg);
             -webkit-transform: rotate(225deg);
         transform: rotate(225deg);
@@ -26,8 +26,8 @@
         width: 12px;
         height: 12px;
         border: 0px;
-        border-top: solid 2px #707070;
-        border-right: solid 2px #707070;
+        border-top: solid 2px var(--third-fontcolor);;
+        border-right: solid 2px var(--third-fontcolor);;
             -ms-transform: rotate(225deg);
             -webkit-transform: rotate(225deg);
         transform: rotate(225deg);
@@ -52,8 +52,8 @@
         width: 12px;
         height: 12px;
         border: 0px;
-        border-top: solid 2px #707070;
-        border-right: solid 2px #707070;
+        border-top: solid 2px var(--third-fontcolor);
+        border-right: solid 2px var(--third-fontcolor);
             -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -67,8 +67,8 @@
         width: 12px;
         height: 12px;
         border: 0px;
-        border-top: solid 2px #707070;
-        border-right: solid 2px #707070;
+        border-top: solid 2px var(--third-fontcolor);
+        border-right: solid 2px var(--third-fontcolor);
             -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
@@ -92,7 +92,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        color: #707070;
+        color: var(--third-fontcolor);
         line-height: 16px;
         @include mq(tb) {
             justify-content: center;

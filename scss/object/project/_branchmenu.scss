@@ -13,7 +13,7 @@
     &__head {
         white-space: nowrap;
         font-size:  rem(41);
-        color: #fff;
+        color: var(--secondry-fontcolor);
         font-family: "Roboto";
         @include mq(tb) {
             font-size: rem(44);
@@ -35,7 +35,7 @@
             content: "";
             border: solid 2px;
             width: 33px;
-            background: #fff;
+            background: var(--secondry-fontcolor);
             margin-top: 20px;
             
             @include mq(tb) {
@@ -67,6 +67,7 @@
         margin-top: 20px;
     }
     & > dl {
+        color: var(--primary-fontcolor);
         padding: 20px 10px;
         @include mq(pc) {
             padding: 20px;
@@ -74,7 +75,6 @@
     }
     & > dl > dt {
         font-size: 22px;
-        color: #3C2A10;
         @include mq(tb) {
             font-size: 24px;
         }

@@ -33,6 +33,7 @@
         -webkit-box-sizing: border-box;  /*webkit系*/
         -moz-box-sizing: border-box;  /*Firefox*/
         z-index: 200;
+        color: var(--secondry-fontcolor);
         @include mq(pc){
             padding: 80px 120px;
         }
@@ -40,7 +41,6 @@
     &__head {
         font-size: rem(30);
         font-weight: bold;
-        color: #fff;
         @include mq(pc) {
             font-size: rem(36);
             width: 70%;
@@ -49,7 +49,6 @@
             content: "";
             display: block;
             width: 75px;
-            background-color: #fff;
             border: solid 1px;
             margin: 20px 0;
             @include mq(pc) {
@@ -62,7 +61,6 @@
         font-size: rem(14);
         font-weight: bold;
         line-height: 2.3;
-        color: #fff;
         @include mq(pc){
             width: 70%; 
             font-size: rem(16);

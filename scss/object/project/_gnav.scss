@@ -1,19 +1,15 @@
 .p-gnav {
+    color: var(--third-fontcolor);
     margin-top: 160px;
-    @include mq(pc) {
-
-    }
-    
     &__item > a {
         display: block;
         font-weight: bold; ;
-        color: #707070;
         padding: 35px 40px;  
         font-size: rem(24);
     }
     &__subitem > a {
         display: block;
-        color: #707070;
+        color: var(--third-fontcolor);
         padding: 11px 66px;
         font-size: rem(20);
         

@@ -1,6 +1,6 @@
 .p-footer {
-    background-color: #97816C;
-    color: #fff;
+    background-color: var(--footer-bg);
+    color: var(--secondry-fontcolor);
     font-family: "M+1m";
     text-align: center;
     &__menu {
@@ -14,7 +14,6 @@
         &:first-child::after {
             content: "";
             margin: 15px;
-            background-color: #fff;
             border: solid 1px;
         }
     }
