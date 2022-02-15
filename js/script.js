@@ -20,38 +20,46 @@ $(function(){
     }
   })
 
-  $(document).ready(function() {
-    var checkResize;
-    $(window).on('load resize', function() {
-        clearTimeout( checkResize );
-        checkResize = setTimeout( resizing, 100 );
-    });
-  
-    //リサイズ完了時に実行する処理
-    function resizing() {
-      var w = $(window).width();
-  
-      //ウィンドウサイズが1023より大きい場合の処理
-      if( w > 1023 ) {
-
-        $('.is-open').hasClass('active');
-        $('.is-open').removeClass('active');
-
-        $('.is-fade').hasClass('cover');
-        $('.is-fade').removeClass('cover');
-
-        $('.is-menu').hasClass('on-menu');
-        $('.is-menu').removeClass('on-menu');
-
-        
-  
-      //ウィンドウサイズが1025以下の場合の処理
-      } else {
-        console.log('ウィンドウサイズは1025以下です。');
-      }
+  var timer = 0;
+ 
+  window.onresize = function () {
+    if (timer > 0) {
+      clearTimeout(timer);
     }
-  });
+ 
+    timer = setTimeout(function () {
+      var w = $(window).width();
+            //ここにリサイズした後に実行したい処理を記述
+            if( w > 1023 ) {
 
+              $('.is-open').hasClass('active');
+              $('.is-open').removeClass('active');
+              $('.c-toggle--btn').show;
+      
+              $('.is-fade').hasClass('cover');
+              $('.is-fade').removeClass('cover');
+      
+              $('.is-menu').hasClass('on-menu');
+              $('.is-menu').removeClass('on-menu');
+            }
+
+            else if( w < 1025) {
+
+              $('.is-open').hasClass('active');
+              $('.is-open').removeClass('active');
+              $('.c-btn--sp').show;
+
+              $('.is-fade').hasClass('cover');
+              $('.is-fade').removeClass('cover');
+
+              $('.is-menu').hasClass('on-menu');
+              $('.is-menu').removeClass('on-menu');
+            }
+      
+    }, 200);
+  };
+ 
+        
 }); //最後のカッコ
 
 
