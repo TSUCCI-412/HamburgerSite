@@ -15,15 +15,15 @@
    }
    &--line {
       display: block;
-      position:fixed;
-      top: 20px;
-      right: 20px;
+      position: absolute;
+      top: 5px;
+      left: 240px;
       width: 40px;
       height: 40px;
       visibility: hidden;
       transition-duration: .3s;
       @include mq(pc) {
-         visibility: hidden;
+         display: none;
       }
    
       &::after,&::before {
@@ -33,9 +33,6 @@
          width: 40px;
          height: 4px;
          background-color: var(--third-fontcolor);
-         @include mq(pc) {
-            visibility: hidden;
-         }
          }
          &::before {
             top: 10px;

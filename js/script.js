@@ -42,7 +42,6 @@ $(function(){
               $('.is-menu').hasClass('on-menu');
               $('.is-menu').removeClass('on-menu');
             }
-
             else if( w < 1025) {
 
               $('.is-open').hasClass('active');
@@ -54,7 +53,7 @@ $(function(){
 
               $('.is-menu').hasClass('on-menu');
               $('.is-menu').removeClass('on-menu');
-            }
+            }        
       
     }, 200);
   };
